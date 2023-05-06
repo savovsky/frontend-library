@@ -1,0 +1,8 @@
+{
+  "name": "frontend-library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/savovsky/frontend-library.git",
+  "author": "Miroslav <savovsky@gmail.com>",
+  "license": "MIT"
+}
