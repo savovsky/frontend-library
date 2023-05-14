@@ -1,0 +1,32 @@
+{
+    "name": "@miro/fel-ui",
+    "description": "React components library",
+    "author": "Miroslav Savovski",
+    "main": "build/index.js",
+    "module": "build/index.es.js",
+    "files": [
+        "build"
+    ],
+    "version": "0.0.1",
+    "license": "MIT",
+    "scripts": {
+        "build": "rollup -c",
+        "clean": "rm -rf build coverage",
+        "start": "yarn --cwd ../../ start-storybook -p 6006",
+        "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
+        "testcover": "yarn test --coverage --watchAll=false",
+        "testcovero": "open ./coverage/lcov-report/index.html",
+        "lint": "eslint ./ --ext js --ext jsx",
+        "lint-fix": "eslint ./ --fix --ext js --ext jsx",
+        "lint-sass": "sass-lint src/**/*.scss -v -q",
+        "flow": "flow"
+    },
+    "peerDependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.34",
+        "@fortawesome/free-regular-svg-icons": "^5.15.3",
+        "@fortawesome/free-solid-svg-icons": "^5.15.2",
+        "@fortawesome/react-fontawesome": "^0.1.14",
+        "react": ">=16.8",
+        "react-dom": ">=16.8"
+    }
+}

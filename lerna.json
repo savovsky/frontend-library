@@ -1,0 +1,30 @@
+{
+    "npmClient": "yarn",
+    "useWorkspaces": true,
+    "packages": [
+        "packages/*"
+    ],
+    "version": "independent",
+    "command": {
+        "version": {
+            "npmClient": "yarn",
+            "message": "chore(release): publish",
+            "ignoreChanges": [
+                "*.md",
+                "*.config.js",
+                "setupTest.js"
+            ]
+        },
+        "publish": {
+            "registry": "https://miro-npm/npm",
+            "verifyRegistry": false,
+            "verifyAccess": false,
+            "ignoreChanges": [
+                "*.md",
+                "*.config.js",
+                "*.test.js",
+                "setupTest.js"
+            ]
+        }
+    }
+}

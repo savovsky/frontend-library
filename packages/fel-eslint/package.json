@@ -1,0 +1,25 @@
+{
+    "name": "@miro/fel-eslint",
+    "description": "ESLint config for React apps",
+    "author": "Miroslav Savovski",
+    "main": "index.js",
+    "version": "0.0.1",
+    "license": "MIT",
+    "dependencies": {
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-config-prettier": "^4.0.0",
+        "eslint-plugin-cypress": "^2.12.1",
+        "eslint-plugin-flowtype": "5.10.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-prettier": "^3.0.1",
+        "eslint-plugin-react": "^7.31.11",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "prettier": "^1.16.4"
+    },
+    "peerDependencies": {
+        "babel-eslint": "10.0.3",
+        "eslint": "6.1.0",
+        "eslint-plugin-react-hooks": "^4.6.0"
+    }
+}

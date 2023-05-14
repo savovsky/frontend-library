@@ -1,0 +1,27 @@
+{
+    "name": "@miro/fel-js-utils",
+    "description": "JavaScript utils library",
+    "author": "Miroslav Savovski",
+    "main": "build/index.js",
+    "module": "build/index.es.js",
+    "files": [
+        "build"
+    ],
+    "version": "0.0.1",
+    "license": "MIT",
+    "scripts": {
+        "build": "rollup -c",
+        "clean": "rm -rf build coverage",
+        "test": "react-scripts test",
+        "testcover": "yarn test --coverage --watchAll=false",
+        "testcovero": "open ./coverage/lcov-report/index.html",
+        "lint": "eslint ./ --ext js --ext jsx",
+        "lint-fix": "eslint ./ --fix --ext js --ext jsx",
+        "flow": "flow"
+    },
+    "peerDependencies": {
+        "moment": "^2.29.2",
+        "moment-timezone": "^0.5.28",
+        "uuid": "^8.3.2"
+    }
+}
