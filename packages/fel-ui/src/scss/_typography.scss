@@ -1,0 +1,93 @@
+$font: Verdana, Arial, sans-serif;
+
+@mixin typography-h0 {
+    font-family: $font;
+    font-size: 20px;
+}
+
+@mixin typography-h1 {
+    font-family: $font;
+    font-size: 18px;
+}
+
+@mixin typography-h2 {
+    font-family: $font;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@mixin typography-title1 {
+    font-family: $font;
+    font-size: 14px;
+}
+
+@mixin typography-title2 {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@mixin typography-title3 {
+    font-family: $font;
+    font-size: 14px;
+}
+
+@mixin typography-title5 {
+    font-family: $font;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@mixin typography-subtitle1 {
+    font-family: $font;
+    font-size: 13px;
+}
+
+@mixin typography-subtitle2 {
+    font-family: $font;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+@mixin typography-subtitle4 {
+    font-family: $font;
+    font-size: 11px;
+}
+
+@mixin typography-body1 {
+    font-family: $font;
+    font-size: 12px;
+}
+
+@mixin typography-body2 {
+    font-family: $font;
+    font-size: 12px;
+}
+
+@mixin typography-body3 {
+    font-family: $font;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@mixin typography-body4 {
+    font-family: $font;
+    font-size: 12px;
+}
+
+// TODO create new typography e.g.
+// @mixin font-pri-title-20 {
+//     font-family: $font-primary;
+//     font-size: 20px;
+// }
+
+// @mixin font-pri-title-20-bold {
+//     font-family: $font-primary;
+//     font-size: 20px;
+//     font-weight: bold;
+// }
+
+// @mixin font-sec-title-20 {
+//     font-family: $font-secondary;
+//     font-size: 20px;
+// }

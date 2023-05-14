@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"name": "fel-ui",
+			"path": "../.."
+		},
+		{
+			"name": "fel-js-utils",
+			"path": "../../../fel-js-utils"
+		},
+		{
+			"name": "fel-eslint",
+			"path": "../../../fel-eslint"
+		}
+	],
+	"settings": {
+		"jest.disabledWorkspaceFolders": [
+            "frontend-library",
+            "fel-eslint"
+        ]
+	}
+}
