@@ -1,4 +1,4 @@
-# @miro/fel-eslint
+# @savovsky/fel-eslint
 
 ESlint config package for React apps:
 

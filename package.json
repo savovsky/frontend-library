@@ -29,7 +29,7 @@
         "lerna-clean": "lerna run clean",
         "start": "start-storybook -p 6006"
     },
-    "peerDependencies": {
+    "devDependencies": {
         "@babel/preset-flow": "^7.14.5",
         "@fortawesome/fontawesome-svg-core": "^1.2.34",
         "@fortawesome/free-regular-svg-icons": "^5.15.3",

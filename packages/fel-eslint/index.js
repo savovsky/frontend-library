@@ -88,7 +88,7 @@ module.exports = {
                     every: ['nesting', 'id'],
                 },
                 allowChildren: true,
-            }
+            },
         ],
 
         'flowtype/boolean-style': [2, 'boolean'],

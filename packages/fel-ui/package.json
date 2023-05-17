@@ -1,5 +1,5 @@
 {
-    "name": "@miro/fel-ui",
+    "name": "@savovsky/fel-ui",
     "description": "React components library",
     "author": "Miroslav Savovski",
     "main": "build/index.js",

@@ -1,3 +1,3 @@
 module.exports = {
-    extends: './packages/fel-eslint';
+    extends: './packages/fel-eslint',
 };

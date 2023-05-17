@@ -1,4 +1,4 @@
-# @miro/fel-js-utils
+# @savovsky/fel-js-utils
 
 JavaScript utils package for JS apps:
 

@@ -1,5 +1,5 @@
 {
-    "name": "@miro/fel-js-utils",
+    "name": "@savovsky/fel-js-utils",
     "description": "JavaScript utils library",
     "author": "Miroslav Savovski",
     "main": "build/index.js",

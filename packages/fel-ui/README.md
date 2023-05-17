@@ -1,4 +1,4 @@
-# @miro/fel-ui
+# @savovsky/fel-ui
 
 React UI components library:
 

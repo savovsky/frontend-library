@@ -29,21 +29,17 @@ $color-table-accent: $color-ignite;
 $color-modal-overlay: rgba(80, 80, 80, 0.80);
 $color-modal-overlay-light: rgba(240, 240, 240, 0.80);
 $color-accent-transparent: rgba(240, 83, 35, 0.50); // TODO Reaname to '$color-transparent-accent'
-$color-green-transparent: rgba(115, 165, 0, 0.40); // TODO Reaname to '$color-transparent-accent'
+$color-green-transparent: rgba(115, 165, 0, 0.40); // TODO Reaname to '$color-transparent-green'
 
-// Shadows
+// TODO fix the scss error
+// $color-shadow: {
+//     '1': rgba(0, 0, 0, 0.60),
+//     '2': rgba(80, 80, 80, 0.40),
+//     '3': rgba(80, 80, 80, 0.20)
+// };
 
-// sass-lint: disable css-varvalueexpected
-$color-shadow: {
-    '1': rgba(0, 0, 0, 0.60),
-    '2': rgba(80, 80, 80, 0.40),
-    '3': rgba(80, 80, 80, 0.20),
-};
-
-$color-shadow-light: {
-    '1': rgba(0, 0, 0, 0.50),
-    '2': rgba(230, 230, 230, 0.40),
-    '3': rgba(230, 230, 230, 0.20),
-};
-
-// sass-lint: enable css-varvalueexpected
+// $color-shadow-light: {
+//     '1': rgba(0, 0, 0, 0.50),
+//     '2': rgba(230, 230, 230, 0.40),
+//     '3': rgba(230, 230, 230, 0.20)
+// };

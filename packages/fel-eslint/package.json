@@ -1,5 +1,5 @@
 {
-    "name": "@miro/fel-eslint",
+    "name": "@savovsky/fel-eslint",
     "description": "ESLint config for React apps",
     "author": "Miroslav Savovski",
     "main": "index.js",
