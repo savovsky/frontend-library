@@ -6,7 +6,7 @@ module.exports = {
     addons: [
         '@storybook/preset-scss',
         '@storybook/addon-essentials',
-        '@storybook/preset-a11y',
+        '@storybook/addon-a11y',
         '@storybook/addon-notes/register-panel',
     ]
 }

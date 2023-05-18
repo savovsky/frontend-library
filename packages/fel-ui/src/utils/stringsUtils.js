@@ -37,4 +37,8 @@ export default {
     // Snackbars
     copyToClipboardSuccessMsg: 'Copied to your clipboard',
     failedToCopy: 'Failed to copy',
+
+    // Tests
+    throwsCorrectError : 'Throws correct error',
+    doesNotThrowAnError: 'Does not throw an error',
 };

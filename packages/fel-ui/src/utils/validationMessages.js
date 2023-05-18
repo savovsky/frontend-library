@@ -1,6 +1,17 @@
 // @flow
 
-export default function validationMessages(componentName: string): Function {
+type Return = {
+    requiredProp: Function,
+    mustBeFunction: Function,
+    mustBeString: Function,
+    mustBeNumber: Function,
+    mustBeBoolean: Function,
+    mustBeArray: Function,
+    emptyArray: Function,
+    mustBeOneOf: Function,
+};
+
+export default function validationMessages(componentName: string): Return {
     const origin = 'FEL React Component';
 
     return {

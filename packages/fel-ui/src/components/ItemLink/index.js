@@ -1,8 +1,8 @@
 // @flow
 
-// TODO add the links from notion WEB/Links
-//
-//
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+// https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/
+// https://mathiasbynens.github.io/rel-noopener/
 
 import * as React from 'react';
 

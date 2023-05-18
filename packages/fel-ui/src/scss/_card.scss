@@ -1,18 +1,18 @@
 .fel__card {
-    @include card-shadow;
+    // @include card-shadow;
     border: 1px solid $color-slate;
     border-radius: 3px;
     background-color: $color-white;
 }
 
 .fel__card-dialog {
-    @include card-dialog-shadow;
+    // @include card-dialog-shadow;
     border-radius: 5px;
     background-color: $color-white;
 }
 
 .fel__card-dialog-light {
-    @include card-dialog-shadow-light;
+    // @include card-dialog-shadow-light;
     border-radius: 5px;
     background-color: $color-white;
 }

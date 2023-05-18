@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ItemLink } from '../../packages/fel-ui/src';
-import { readMe } from '../../packages/fel-ui/src/components/ItemLink/README.md';
+import readMe from '../../packages/fel-ui/src/components/ItemLink/README.md';
 
 export default {
     title: 'UI/ItemLink',
@@ -36,4 +36,20 @@ Disabled.args = {
     href,
     children,
     isDisabled: true,
+};
+
+export const Mock = Template.bind({});
+
+Mock.args = {
+    href,
+    children,
+    isMockedData: true,
+};
+
+export const TargetParent = Template.bind({});
+
+TargetParent.args = {
+    href,
+    children,
+    target: 'parent',
 };
