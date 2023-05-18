@@ -1,0 +1,21 @@
+@import '../../scss/index';
+
+.fel__item-link {
+    outline: none;
+    color: $color-link;
+    text-align: center;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:disabled {
+        @include item-disabled;
+    }
+
+    &.mockup {
+        color: $color-mock-data;
+    }
+}

@@ -29,6 +29,7 @@
         "lerna-clean": "lerna run clean",
         "start": "start-storybook -p 6006"
     },
+
     "devDependencies": {
         "@babel/preset-flow": "^7.14.5",
         "@fortawesome/fontawesome-svg-core": "^1.2.34",
@@ -41,7 +42,7 @@
         "@storybook/addon-essentials": "^6.3.12",
         "@storybook/addon-notes": "^5.3.21",
         "@storybook/preset-scss": "^1.0.3",
-        "@storybook/react": "^6.3.11",
+        "@storybook/react": "6.4.9",
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
         "@testing-library/react-hooks": "^5.0.0",
@@ -61,7 +62,6 @@
         "lerna": "4.0.0",
         "moment": "^2.29.2",
         "moment-timezone": "^0.5.28",
-        "node-sass": "^4.13.1",
         "postcss": "8",
         "prettier": "^1.16.4",
         "react": "16.9.0",
@@ -72,7 +72,7 @@
         "rollup-plugin-babel": "^4.4.0",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-postcss": "^4.0.1",
-        "sass": "^1.43.2",
+        "sass": "^1.55.0",
         "sass-lint": "^1.13.1",
         "style-loader": "2",
         "uuid": "^8.3.2"

@@ -15,7 +15,7 @@ export default {
             exports: 'auto',
             globals: {
                 react: 'React',
-            }
+            },
         },
         {
             file: packageJson.main,
@@ -24,15 +24,19 @@ export default {
             exports: 'auto',
             globals: {
                 react: 'React',
-            }
+            },
         },
     ],
     plugins: [
-        resolve({ preferBuiltins: true, browser: true}),
+        resolve({ preferBuiltins: true, browser: true }),
         peerDepsExternal(),
         babel({
             exclude: ['**/node_modules/**', 'build/**'],
-            presets: ['@babel/preset-env', '@babel/preset-flow', '@babel/preset-react'],
+            presets: [
+                '@babel/preset-env',
+                '@babel/preset-flow',
+                '@babel/preset-react',
+            ],
         }),
         postcss({
             extract: 'styles.css',
@@ -41,4 +45,4 @@ export default {
             minimize: true,
         }),
     ],
-}
+};
