@@ -11,7 +11,7 @@
         text-decoration: underline;
     }
 
-    &:disabled {
+    &.disabled {
         @include item-disabled;
     }
 

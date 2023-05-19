@@ -5,7 +5,11 @@ import validationMessages from '../../utils/validationMessages';
 const message = validationMessages('ItemLink');
 const targetOptions = ['self', 'blank', 'parent', 'top'];
 
-const propsValidation = (href: string, children: any, target?: string):void => {
+const propsValidation = (
+    href: string,
+    children: any,
+    target?: string,
+): void => {
     if (!href && href !== '') {
         throw Error(message.requiredProp('href'));
     }
@@ -22,5 +26,5 @@ const propsValidation = (href: string, children: any, target?: string):void => {
 
 export default {
     propsValidation,
-    targetOptions
+    targetOptions,
 };

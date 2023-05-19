@@ -7,16 +7,45 @@ const message = validationMessages(componentName);
 const { propsValidation, targetOptions } = utils;
 
 describe(`${componentName} propsValidation utils`, () => {
+    test(`${str.throwsCorrectError}`, () => {
+        expect(() => {
+            propsValidation();
+        }).toThrow(message.requiredProp('href'));
+    });
 
     test(`${str.throwsCorrectError}`, () => {
-        expect(() => { propsValidation() }).toThrow(message.requiredProp('href'));
+        const href = { foo: 'bar' };
+
+        expect(() => {
+            propsValidation(href);
+        }).toThrow(message.mustBeString('href'));
+    });
+
+    test(`${str.throwsCorrectError}`, () => {
+        const href = 'foo';
+
+        expect(() => {
+            propsValidation(href);
+        }).toThrow(message.requiredProp('children'));
+    });
+
+    test(`${str.throwsCorrectError}`, () => {
+        const href = 'foo';
+        const children = 'bar';
+        const target = 'baz';
+
+        expect(() => {
+            propsValidation(href, children, target);
+        }).toThrow(message.mustBeOneOf('target', targetOptions));
     });
 
     test(`${str.doesNotThrowAnError}`, () => {
         const href = 'foo';
         const children = 'bar';
-        const target = 'baz';
+        const target = 'self';
 
-        expect(() => { propsValidation(href, children, target) }).not.toThrow();
+        expect(() => {
+            propsValidation(href, children, target);
+        }).not.toThrow();
     });
 });

@@ -39,6 +39,6 @@ export default {
     failedToCopy: 'Failed to copy',
 
     // Tests
-    throwsCorrectError : 'Throws correct error',
+    throwsCorrectError: 'Throws correct error',
     doesNotThrowAnError: 'Does not throw an error',
 };
