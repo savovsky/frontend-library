@@ -14,7 +14,7 @@
         "clean": "rm -rf build coverage",
         "test": "react-scripts test",
         "testcover": "yarn test --coverage --watchAll=false",
-        "testcovero": "open ./coverage/lcov-report/index.html",
+        "testcovero": "start ./coverage/lcov-report/index.html",
         "lint": "eslint ./ --ext js --ext jsx",
         "lint-fix": "eslint ./ --fix --ext js --ext jsx",
         "flow": "flow"
