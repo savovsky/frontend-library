@@ -220,7 +220,7 @@ const getPermissionsFromJwt = () => {
 
     if (jsonWebToken) {
         const decodedJwtPayload = window.atob(jsonWebToken.split('.')[1]);
-        const payload = (decodedJwtPayload);
+        const payload = JSON.parse(decodedJwtPayload);
 
         return payload.permissions ? payload.permissions : null;
     }
