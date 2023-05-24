@@ -21,11 +21,11 @@ export default {
         },
     ],
     plugins: [
-        resolve({ preferBuiltins: true, browser: true}),
+        resolve({ preferBuiltins: true, browser: true }),
         peerDepsExternal(),
         babel({
             exclude: ['**/node_modules/**', 'build/**'],
             presets: ['@babel/preset-env', '@babel/preset-flow'],
         }),
     ],
-}
+};

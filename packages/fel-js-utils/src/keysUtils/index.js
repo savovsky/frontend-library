@@ -1,4 +1,4 @@
-/* @savovskybul ignore file */
+/* istanbul ignore file */
 
 // IMPORTANT
 // The values must be equal to the keys in the sessionStorage or
