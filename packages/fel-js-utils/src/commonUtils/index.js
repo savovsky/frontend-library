@@ -2,6 +2,17 @@
 
 import str from '../stringsUtils';
 
+import type { TableColumn } from '../../../fel-ui/src/flowTypes';
+
+type SortBy = {
+    isAscending: boolean,
+    propKey: string,
+    columnProps?: {
+        ...TableColumn,
+        isoDateOrNumber?: boolean,
+    },
+};
+
 /**
  * Add a dolar sign "$" to the provided value(number).
  * e.g. -5.67 => "-$5.67"
@@ -126,6 +137,213 @@ function scrollToTop(): void {
     }
 }
 
+/**
+ * Sorting array of objects by nested value ascendingly
+ * @param {Object[]} arr
+ * @param {string} groupPropKey
+ * @param {string} propKey
+ * @returns `Array<Object>`
+ */
+const sortArrayOfObjectsByNestedValueAscendingly = (
+    arr: Array<Object>,
+    groupPropKey: string,
+    propKey: string,
+): Array<Object> => {
+    return arr.sort((a: Object, b: Object) => {
+        if (typeof a[groupPropKey][propKey] === 'string') {
+            return a[groupPropKey][propKey].localeCompare(
+                b[groupPropKey][propKey],
+            );
+        }
+
+        return a[groupPropKey][propKey] - b[groupPropKey][propKey];
+    });
+};
+
+/**
+ * Sorting array of objects by nested value descendingly
+ * @param {Object[]} arr
+ * @param {string} groupPropKey
+ * @param {string} propKey
+ * @returns `Array<Object>`
+ */
+const sortArrayOfObjectsByNestedValueDescendingly = (
+    arr: Array<Object>,
+    groupPropKey: string,
+    propKey: string,
+): Array<Object> => {
+    return arr.sort((a: Object, b: Object) => {
+        if (typeof b[groupPropKey][propKey] === 'string') {
+            return b[groupPropKey][propKey].localeCompare(
+                a[groupPropKey][propKey],
+            );
+        }
+
+        return b[groupPropKey][propKey] - a[groupPropKey][propKey];
+    });
+};
+
+/**
+ * Sorting array of objects by value ascendlingly
+ * @param {Object[]} arr
+ * @param {string} propKey
+ * @returns `Array<Object>`
+ */
+const sortArrayOfObjectsByValueAscendingly = (
+    arr: Array<Object>,
+    propKey: string,
+): Array<Object> => {
+    return arr.sort((a: Object, b: Object) => {
+        if (typeof a[propKey] === 'string') {
+            return a[propKey].localeCompare(b[propKey]);
+        }
+
+        return a[propKey] - b[propKey];
+    });
+};
+
+/**
+ * Sorting array of objects by value descendlingly
+ * @param {Object[]} arr
+ * @param {string} propKey
+ * @returns `Array<Object>`
+ */
+const sortArrayOfObjectsByValueDescendingly = (
+    arr: Array<Object>,
+    propKey: string,
+): Array<Object> => {
+    return arr.sort((a: Object, b: Object) => {
+        if (typeof b[propKey] === 'string') {
+            return b[propKey].localeCompare(a[propKey]);
+        }
+
+        return b[propKey] - a[propKey];
+    });
+};
+
+/**
+ * Sorting array of objects by provided specific config object which
+ * ralates to TableClientSort Component in fel-ui package
+ * @param {Object[]} arr
+ * @param {Object} sortBy specific config object
+ * @returns `Array<Object>`
+ */
+const sortArrayOfObjectsBy = (
+    arr: Array<Object>,
+    sortBy: SortBy,
+): Array<Object> => {
+    const { isAscending, propKey, columnProps } = sortBy;
+
+    if (columnProps && columnProps.isoDateOrNumber) {
+        if (isAscending) {
+            sortArrayOfObjectsByNestedValueAscendingly(
+                arr,
+                'isoDateOrNumber',
+                propKey,
+            );
+        } else {
+            sortArrayOfObjectsByNestedValueDescendingly(
+                arr,
+                'isoDateOrNumber',
+                propKey,
+            );
+        }
+    } else if (isAscending) {
+        sortArrayOfObjectsByValueAscendingly(arr, propKey);
+    } else {
+        sortArrayOfObjectsByValueDescendingly(arr, propKey);
+    }
+
+    return arr;
+};
+
+/**
+ * Returns 'N/A' when obj[key] is an empty string or null AND defaultValue is not provided.
+ * Returns the defaultValue, when obj[key] is an empty string or null AND defaultValue is provided.
+ * Else returns the obj[key] value converted to string.
+ * @param {Object} obj
+ * @param {string} key
+ * @param {string} defaultValue
+ * @returns `string`
+ */
+const getValueFromObjByKeyAndReturnString = (
+    obj: Object,
+    key: string,
+    defaultValue?: string,
+): string => {
+    const value = obj[key];
+
+    return valueToString(value, defaultValue);
+};
+
+/**
+ * Returns:
+ * e.g. Sunnyvale, CA 94089 | Sunnyvale, CA | Sunnyvale, 94089 | Sunnyvale | CA 94089 | CA | 94089 | N/A
+ * @param {(string|null)} city
+ * @param {(string|null)} state
+ * @param {(string|null)} postCode
+ * @returns `string`
+ */
+const concatCityStateZip = (
+    city: string | null,
+    state: string | null,
+    postCode: string | null,
+): string => {
+    const concatStateZip = () => {
+        if (state && postCode) {
+            return `${state} ${postCode}`;
+        } else if (state && !postCode) {
+            return state;
+        } else if (!state && postCode) {
+            return postCode;
+        } else {
+            return '';
+        }
+    };
+
+    const stateZip = concatStateZip();
+
+    if (city) {
+        if (stateZip) {
+            return `${city}, ${stateZip}`;
+        }
+
+        return city;
+    } else {
+        if (stateZip) {
+            return stateZip;
+        }
+
+        return str.notAvailable;
+    }
+};
+
+/**
+ * Returns:
+ * e.g. John Doe | John | Doe | N/A
+ * @param {(string|null)} firstName
+ * @param {(string|null)} lastName
+ * @returns `string`
+ */
+const concatFullName = (
+    firstName: string | null,
+    lastName: string | null,
+): string => {
+    if (firstName && lastName) {
+        return `${firstName} ${lastName}`;
+    }
+
+    if (firstName && !lastName) {
+        return firstName;
+    }
+
+    if (!firstName && lastName) {
+        return lastName;
+    }
+
+    return str.notAvailable;
+};
+
 export default {
     addDolarSign,
     stringToId,
@@ -134,4 +352,8 @@ export default {
     toTwoDecNum,
     truncateString,
     scrollToTop,
+    sortArrayOfObjectsBy,
+    getValueFromObjByKeyAndReturnString,
+    concatCityStateZip,
+    concatFullName,
 };

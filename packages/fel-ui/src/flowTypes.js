@@ -1,5 +1,5 @@
-/* istanbul ignore file */
 // @flow
+/* istanbul ignore file */
 
 export type TableColumn = {
     columnTitle: string | Object,
