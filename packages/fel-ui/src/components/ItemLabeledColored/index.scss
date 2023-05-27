@@ -1,0 +1,37 @@
+@import '../../scss/index';
+
+.fel__item-labeled-colored_value {
+    @include typography-title2;
+    color: $color-secondary;
+
+    &.mockup {
+        color: $color-mock-data;
+    }
+}
+
+.fel__item-labeled_color-indicator {
+    width: 14px;
+    height: 14px;
+    margin-left: 7px;
+    border-radius: 50%;
+}
+
+.fel__item-labeled_value-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.fel__color-indicator_secondary {
+    background-color: $color-blue-sky;
+    color: $color-blue-sky;
+}
+
+.fel__item-labeled_value_secondary {
+    color: $color-blue-sky;
+}
+
+.fel__item-labeled_color-indicator_percentage {
+    @include typography-body2;
+    padding: 0 0 0 4px;
+    background-color: unset;
+}

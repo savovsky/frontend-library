@@ -21,7 +21,7 @@ type Props = {
     /** What CSS 'margin' value to use? *(Provide units, e.g. px)* */
     margin?: string,
     /** Is the item value mock? */
-    isMockedData?: boolean, // TODO Rename 'isMockedData' to 'isMockData'
+    isMockedData?: boolean, // TODO Rename 'isMockedData' to 'isMock'
     /** What 'data-testid' to use for the component? */
     dataTestid?: string,
     /** An object with KVPs that will be spread as props (applied) to the 'parent' node.
