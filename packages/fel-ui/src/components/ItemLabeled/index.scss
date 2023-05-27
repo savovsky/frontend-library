@@ -1,0 +1,19 @@
+@import '../../scss/index';
+
+.fel__item-labeled_wrapper {
+    padding: 0 0 15px;
+}
+
+.fel__item-labeled_value {
+    @include typography-body3;
+    color: $color-secondary;
+
+    &.accent {
+        @include typography-h2;
+        color: $color-accent;
+    }
+
+    &.mockup {
+        color: $color-mock-data;
+    }
+}
