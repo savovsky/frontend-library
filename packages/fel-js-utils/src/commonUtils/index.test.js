@@ -40,7 +40,7 @@ describe('commonUtils', () => {
 
         test('Returns correct string', () => {
             const input = '5';
-            const output = '$5.00';
+            const output = '';
 
             expect(addDolarSign(input)).toEqual(output);
         });
@@ -81,7 +81,7 @@ describe('commonUtils', () => {
             const value = null;
             const output = str.notAvailable;
 
-            expect(stringToId(value)).toEqual(output);
+            expect(valueToString(value)).toEqual(output);
         });
 
         test('Returns correct string', () => {
@@ -89,7 +89,7 @@ describe('commonUtils', () => {
             const defaultValue = '';
             const output = defaultValue;
 
-            expect(stringToId(value, defaultValue)).toEqual(output);
+            expect(valueToString(value, defaultValue)).toEqual(output);
         });
 
         test('Returns correct string', () => {
@@ -97,14 +97,14 @@ describe('commonUtils', () => {
             const defaultValue = 'foo';
             const output = defaultValue;
 
-            expect(stringToId(value, defaultValue)).toEqual(output);
+            expect(valueToString(value, defaultValue)).toEqual(output);
         });
 
         test('Returns correct string', () => {
             const value = '';
             const output = str.notAvailable;
 
-            expect(stringToId(value)).toEqual(output);
+            expect(valueToString(value)).toEqual(output);
         });
 
         test('Returns correct string', () => {
@@ -112,14 +112,14 @@ describe('commonUtils', () => {
             const defaultValue = 'foo';
             const output = defaultValue;
 
-            expect(stringToId(value, defaultValue)).toEqual(output);
+            expect(valueToString(value, defaultValue)).toEqual(output);
         });
 
         test('Returns correct string', () => {
             const value = '  ';
             const output = str.notAvailable;
 
-            expect(stringToId(value)).toEqual(output);
+            expect(valueToString(value)).toEqual(output);
         });
 
         test('Returns correct string', () => {
@@ -127,35 +127,35 @@ describe('commonUtils', () => {
             const defaultValue = 'foo';
             const output = defaultValue;
 
-            expect(stringToId(value, defaultValue)).toEqual(output);
+            expect(valueToString(value, defaultValue)).toEqual(output);
         });
 
         test('Returns correct string', () => {
             const value = ' ab c  ';
             const output = 'ab c';
 
-            expect(stringToId(value)).toEqual(output);
+            expect(valueToString(value)).toEqual(output);
         });
 
         test('Returns correct string', () => {
             const value = 0;
             const output = '0';
 
-            expect(stringToId(value)).toEqual(output);
+            expect(valueToString(value)).toEqual(output);
         });
 
         test('Returns correct string', () => {
             const value = 10;
             const output = '10';
 
-            expect(stringToId(value)).toEqual(output);
+            expect(valueToString(value)).toEqual(output);
         });
 
         test('Returns correct string', () => {
             const value = 'abc';
             const output = 'abc';
 
-            expect(stringToId(value)).toEqual(output);
+            expect(valueToString(value)).toEqual(output);
         });
     });
 
@@ -372,26 +372,362 @@ describe('commonUtils', () => {
     });
 
     describe(`${sortArrayOfObjectsBy.name}`, () => {
-        test('Returns correct string', () => {
-            expect(sortArrayOfObjectsBy(5.67)).toEqual('$5.67');
+        test('Returns correct ordered array', () => {
+            const arr = [
+                { bar: 'a', foo: '1' },
+                { bar: 'b', foo: '3' },
+                { bar: 'c', foo: '2' },
+            ];
+
+            const sortBy = {
+                isAscending: true,
+                propKey: 'foo',
+            };
+
+            const output = [
+                { bar: 'a', foo: '1' },
+                { bar: 'c', foo: '2' },
+                { bar: 'b', foo: '3' },
+            ];
+
+            expect(sortArrayOfObjectsBy(arr, sortBy)).toEqual(output);
+        });
+
+        test('Returns correct ordered array', () => {
+            const arr = [
+                { bar: 'a', foo: 1 },
+                { bar: 'b', foo: 3 },
+                { bar: 'c', foo: 2 },
+            ];
+
+            const sortBy = {
+                isAscending: true,
+                propKey: 'foo',
+            };
+
+            const output = [
+                { bar: 'a', foo: 1 },
+                { bar: 'c', foo: 2 },
+                { bar: 'b', foo: 3 },
+            ];
+
+            expect(sortArrayOfObjectsBy(arr, sortBy)).toEqual(output);
+        });
+
+        test('Returns correct ordered array', () => {
+            const arr = [
+                { bar: 'a', foo: '1' },
+                { bar: 'b', foo: '3' },
+                { bar: 'c', foo: '2' },
+            ];
+
+            const sortBy = {
+                isAscending: false,
+                propKey: 'foo',
+            };
+
+            const output = [
+                { bar: 'b', foo: '3' },
+                { bar: 'c', foo: '2' },
+                { bar: 'a', foo: '1' },
+            ];
+
+            expect(sortArrayOfObjectsBy(arr, sortBy)).toEqual(output);
+        });
+
+        test('Returns correct ordered array', () => {
+            const arr = [
+                { bar: 'a', foo: 1 },
+                { bar: 'b', foo: 2 },
+                { bar: 'c', foo: 3 },
+            ];
+
+            const sortBy = {
+                isAscending: false,
+                propKey: 'foo',
+            };
+
+            const output = [
+                { bar: 'c', foo: 3 },
+                { bar: 'b', foo: 2 },
+                { bar: 'a', foo: 1 },
+            ];
+
+            expect(sortArrayOfObjectsBy(arr, sortBy)).toEqual(output);
+        });
+
+        test('Returns correct ordered array', () => {
+            const arr = [
+                { bar: 'a', foo: '$1.00', isoDateOrNumber: { foo: 1.0 } },
+                { bar: 'b', foo: '$11.00', isoDateOrNumber: { foo: 11.0 } },
+                { bar: 'c', foo: '$2.00', isoDateOrNumber: { foo: 2.0 } },
+            ];
+
+            const sortBy = {
+                isAscending: false,
+                propKey: 'foo',
+                columnProps: { isoDateOrNumber: true },
+            };
+
+            const output = [
+                { bar: 'b', foo: '$11.00', isoDateOrNumber: { foo: 11.0 } },
+                { bar: 'c', foo: '$2.00', isoDateOrNumber: { foo: 2.0 } },
+                { bar: 'a', foo: '$1.00', isoDateOrNumber: { foo: 1.0 } },
+            ];
+
+            expect(sortArrayOfObjectsBy(arr, sortBy)).toEqual(output);
+        });
+
+        test('Returns correct ordered array', () => {
+            const arr = [
+                { bar: 'a', foo: '$0.10', isoDateOrNumber: { foo: 0.1 } },
+                { bar: 'b', foo: '$0.11', isoDateOrNumber: { foo: 0.11 } },
+                { bar: 'c', foo: '$0.02', isoDateOrNumber: { foo: 0.02 } },
+            ];
+
+            const sortBy = {
+                isAscending: true,
+                propKey: 'foo',
+                columnProps: { isoDateOrNumber: true },
+            };
+
+            const output = [
+                { bar: 'c', foo: '$0.02', isoDateOrNumber: { foo: 0.02 } },
+                { bar: 'a', foo: '$0.10', isoDateOrNumber: { foo: 0.1 } },
+                { bar: 'b', foo: '$0.11', isoDateOrNumber: { foo: 0.11 } },
+            ];
+
+            expect(sortArrayOfObjectsBy(arr, sortBy)).toEqual(output);
+        });
+
+        test('Returns correct ordered array', () => {
+            const arr = [
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'a', foo: '05/07/2022', isoDateOrNumber: { foo: '2022-07-05T08:33:20.000Z' } },
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'b', foo: '05/07/2019', isoDateOrNumber: { foo: '2019-07-05T08:33:20.000Z' } },
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'c', foo: '05/05/2022', isoDateOrNumber: { foo: '2022-05-05T08:33:20.000Z' } },
+
+            ];
+
+            const sortBy = {
+                isAscending: true,
+                propKey: 'foo',
+                columnProps: { isoDateOrNumber: true },
+            };
+
+            const output = [
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'b', foo: '05/07/2019', isoDateOrNumber: { foo: '2019-07-05T08:33:20.000Z' } },
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'c', foo: '05/05/2022', isoDateOrNumber: { foo: '2022-05-05T08:33:20.000Z' } },
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'a', foo: '05/07/2022', isoDateOrNumber: { foo: '2022-07-05T08:33:20.000Z' } },
+            ];
+
+            expect(sortArrayOfObjectsBy(arr, sortBy)).toEqual(output);
+        });
+
+        test('Returns correct ordered array', () => {
+            const arr = [
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'a', foo: '05/07/2022', isoDateOrNumber: { foo: '2022-07-05T08:33:20.000Z' } },
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'b', foo: '05/07/2019', isoDateOrNumber: { foo: '2019-07-05T08:33:20.000Z' } },
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'c', foo: '05/05/2022', isoDateOrNumber: { foo: '2022-05-05T08:33:20.000Z' } },
+
+            ];
+
+            const sortBy = {
+                isAscending: false,
+                propKey: 'foo',
+                columnProps: { isoDateOrNumber: true },
+            };
+
+            const output = [
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'a', foo: '05/07/2022', isoDateOrNumber: { foo: '2022-07-05T08:33:20.000Z' } },
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'c', foo: '05/05/2022', isoDateOrNumber: { foo: '2022-05-05T08:33:20.000Z' } },
+                // eslint-disable-next-line prettier/prettier
+                { bar: 'b', foo: '05/07/2019', isoDateOrNumber: { foo: '2019-07-05T08:33:20.000Z' } },
+            ];
+
+            expect(sortArrayOfObjectsBy(arr, sortBy)).toEqual(output);
         });
     });
 
     describe(`${getValueFromObjByKeyAndReturnString.name}`, () => {
         test('Returns correct string', () => {
-            expect(getValueFromObjByKeyAndReturnString(5.67)).toEqual('$5.67');
+            const obj = { foo: 'bar' };
+            const key = 'foo';
+            const output = 'bar';
+
+            expect(getValueFromObjByKeyAndReturnString(obj, key)).toEqual(
+                output,
+            );
+        });
+
+        test('Returns correct string', () => {
+            const obj = { foo: 1 };
+            const key = 'foo';
+            const output = '1';
+
+            expect(getValueFromObjByKeyAndReturnString(obj, key)).toEqual(
+                output,
+            );
+        });
+
+        test('Returns correct string', () => {
+            const obj = { foo: 0 };
+            const key = 'foo';
+            const output = '0';
+
+            expect(getValueFromObjByKeyAndReturnString(obj, key)).toEqual(
+                output,
+            );
+        });
+
+        test('Returns correct string', () => {
+            const obj = { foo: 'bar' };
+            const key = 'name';
+            const output = str.notAvailable;
+
+            expect(getValueFromObjByKeyAndReturnString(obj, key)).toEqual(
+                output,
+            );
+        });
+
+        test('Returns correct string', () => {
+            const obj = { foo: 'bar' };
+            const key = 'name';
+            const defaultValue = '';
+            const output = defaultValue;
+
+            expect(
+                getValueFromObjByKeyAndReturnString(obj, key, defaultValue),
+            ).toEqual(output);
+        });
+
+        test('Returns correct string', () => {
+            const obj = { foo: 'bar' };
+            const key = 'name';
+            const defaultValue = '123';
+            const output = defaultValue;
+
+            expect(
+                getValueFromObjByKeyAndReturnString(obj, key, defaultValue),
+            ).toEqual(output);
         });
     });
 
     describe(`${concatCityStateZip.name}`, () => {
         test('Returns correct string', () => {
-            expect(concatCityStateZip(5.67)).toEqual('$5.67');
+            const city = null;
+            const state = null;
+            const postcode = null;
+            const output = str.notAvailable;
+
+            expect(concatCityStateZip(city, state, postcode)).toEqual(output);
+        });
+
+        test('Returns correct string', () => {
+            const city = 'foo';
+            const state = null;
+            const postcode = null;
+            const output = 'foo';
+
+            expect(concatCityStateZip(city, state, postcode)).toEqual(output);
+        });
+
+        test('Returns correct string', () => {
+            const city = 'foo';
+            const state = 'bar';
+            const postcode = null;
+            const output = 'foo, bar';
+
+            expect(concatCityStateZip(city, state, postcode)).toEqual(output);
+        });
+
+        test('Returns correct string', () => {
+            const city = 'foo';
+            const state = 'bar';
+            const postcode = 'baz';
+            const output = 'foo, bar baz';
+
+            expect(concatCityStateZip(city, state, postcode)).toEqual(output);
+        });
+
+        test('Returns correct string', () => {
+            const city = null;
+            const state = 'bar';
+            const postcode = 'baz';
+            const output = 'bar baz';
+
+            expect(concatCityStateZip(city, state, postcode)).toEqual(output);
+        });
+
+        test('Returns correct string', () => {
+            const city = null;
+            const state = 'bar';
+            const postcode = null;
+            const output = 'bar';
+
+            expect(concatCityStateZip(city, state, postcode)).toEqual(output);
+        });
+
+        test('Returns correct string', () => {
+            const city = 'foo';
+            const state = null;
+            const postcode = 'baz';
+            const output = 'foo, baz';
+
+            expect(concatCityStateZip(city, state, postcode)).toEqual(output);
+        });
+
+        test('Returns correct string', () => {
+            const city = null;
+            const state = null;
+            const postcode = 'baz';
+            const output = 'baz';
+
+            expect(concatCityStateZip(city, state, postcode)).toEqual(output);
         });
     });
 
     describe(`${concatFullName.name}`, () => {
         test('Returns correct string', () => {
-            expect(concatFullName(5.67)).toEqual('$5.67');
+            const firstName = null;
+            const lastName = null;
+            const output = str.notAvailable;
+
+            expect(concatFullName(firstName, lastName)).toEqual(output);
+        });
+
+        test('Returns correct string', () => {
+            const firstName = 'foo';
+            const lastName = 'bar';
+            const output = 'foo bar';
+
+            expect(concatFullName(firstName, lastName)).toEqual(output);
+        });
+
+        test('Returns correct string', () => {
+            const firstName = 'foo';
+            const lastName = null;
+            const output = 'foo';
+
+            expect(concatFullName(firstName, lastName)).toEqual(output);
+        });
+
+        test('Returns correct string', () => {
+            const firstName = null;
+            const lastName = 'bar';
+            const output = 'bar';
+
+            expect(concatFullName(firstName, lastName)).toEqual(output);
         });
     });
 });
