@@ -1,3 +1,22 @@
+@mixin display-flex {
+    // sass-lint:disable no-duplicate-properties
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    // sass-lint:enable no-duplicate-properties
+}
+
+@mixin position-sticky {
+    // sass-lint:disable no-duplicate-properties
+    display: -webkit-sticky;
+    display: -moz-sticky;
+    display: -ms-sticky;
+    display: -o-sticky;
+    display: sticky;
+    // sass-lint:enable no-duplicate-properties
+}
+
 @mixin item-disabled {
     cursor: default;
     opacity: 0.5;
@@ -74,4 +93,47 @@
     0 9px 46px 8px map-get($color-shadow-light, '3');
 }
 
+@mixin icon-botton {
+    @include typography-title3;
+    margin: 0;
+    padding: 0;
+    border: unset;
+    outline: unset;
+    background-color: unset;
+    color: $color-fog;
+    text-transform: capitalize;
+    cursor: pointer;
 
+    &:focus-within,
+    &:focus,
+    &:hover {
+        @include transition;
+        color: $color-accent;
+
+        &.active {
+            color: $color-fog;
+        }
+    }
+
+    &.fade-in {
+        @include fade-in;
+    }
+
+    &.fade-in {
+        @include item-disabled;
+    }
+
+    &.mockup {
+        color: $color-mock-data;
+    }
+
+    &.active {
+        color: $color-accent;
+    }
+
+    &.active-radio {
+        color: $color-accent;
+        cursor: default;
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,17 @@
+@import '../../../scss/index';
+
+.fel__button-link {
+    @include icon-button;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-link;
+    text-align: left;
+
+
+    &:focus,
+    &:hover {
+        color: $color-link;
+        text-decoration: underline;
+    }
+}

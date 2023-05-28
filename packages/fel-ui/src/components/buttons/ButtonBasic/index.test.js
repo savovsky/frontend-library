@@ -33,7 +33,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -59,7 +59,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -85,7 +85,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -111,7 +111,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -137,7 +137,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -163,7 +163,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).not.toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -190,7 +190,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).not.toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -217,7 +217,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).not.toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -244,7 +244,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).not.toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -271,7 +271,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).not.toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -297,7 +297,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -324,7 +324,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -351,7 +351,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -378,7 +378,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -405,7 +405,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -432,7 +432,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).not.toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -460,7 +460,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).not.toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -488,7 +488,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).not.toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}
@@ -516,7 +516,7 @@ describe('<ButtonBasic />', () => {
         expect(handleOnClick).not.toHaveBeenCalled();
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId, getByText } = render(
             <ButtonBasic
                 handleOnClick={handleOnClick}

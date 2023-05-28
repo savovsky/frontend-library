@@ -1,0 +1,44 @@
+@import '../../../scss/index';
+
+$icon-button-offset: 6px;
+
+.fel__button-icon {
+    @include icon-button;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &.top {
+        flex-direction: column-reverse;
+
+        .fel__button-icon_label {
+            margin-bottom: $icon-button-offset;
+        }
+    }
+
+    &.right {
+        flex-direction: row;
+
+        .fel__button-icon_label {
+            margin-top: 2px;
+            margin-left: $icon-button-offset;
+        }
+    }
+
+    &.bottom {
+        flex-direction: column;
+
+        .fel__button-icon_label {
+            margin-top: $icon-button-offset;
+        }
+    }
+
+    &.left {
+        flex-direction: row-reverse;
+
+        .fel__button-icon_label {
+            margin-top: 2px;
+            margin-right: $icon-button-offset;
+        }
+    }
+}
