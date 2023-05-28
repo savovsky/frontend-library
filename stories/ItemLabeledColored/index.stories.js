@@ -9,7 +9,7 @@ export default {
     parameters: {
         componentSubtitle: 'React Component',
         notes: { readMe },
-        controls: { hideNoControlsWarning: true },
+        // controls: { hideNoControlsWarning: true },
     },
 };
 
@@ -41,13 +41,56 @@ IndicatorColorSet.args = {
     indicatorColor: '#dc4405',
 };
 
-// TODO IndicatorWithPercantageColorSet and so on...
+export const IndicatorWithPercentageColorSet = Template.bind({});
+
+IndicatorWithPercentageColorSet.args = {
+    label,
+    value,
+    indicatorColor: '#dc4405',
+    indicatorPercentage: '15.00',
+};
+
+export const IndicatorClassnameSet = Template.bind({});
+
+IndicatorClassnameSet.args = {
+    label,
+    value,
+    indicatorClassName: 'fel__color-indicator_secondary',
+};
+
+export const IndicatorWithPercentageClassnameSet = Template.bind({});
+
+IndicatorWithPercentageClassnameSet.args = {
+    label,
+    value,
+    indicatorClassName: 'fel__color-indicator_secondary',
+    indicatorPercentage: '15.00',
+};
+
+export const LabelColorSet = Template.bind({});
+
+LabelColorSet.args = {
+    label,
+    value,
+    indicatorClassName: 'fel__color-indicator_secondary',
+    labelColor: '#dc4405',
+};
+export const LabelClassnameSet = Template.bind({});
+
+LabelClassnameSet.args = {
+    label,
+    value,
+    indicatorColor: '#dc4405',
+    labelClassName: 'fel__item-labeled_value_secondary',
+};
 
 export const Mock = Template.bind({});
 
 Mock.args = {
     label,
     value,
-    // TODO add more
+    indicatorColor: '#dc4405',
+    indicatorClassname: 'fel__color-indicator_secondary',
+    labelClassName: 'fel__item-labeled_value_secondary',
     isMockedData: true,
 };
