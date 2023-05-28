@@ -1,0 +1,94 @@
+@import '../../../scss/index';
+
+.fel__button-basic {
+    @include typography-title1;
+    @include transition;
+    display: inline-block;
+    min-width: 35px;
+    margin: 0;
+    padding: 10px 16px;
+    border: 1px solid $color-primary;
+    border-radius: 4px;
+    outline: none;
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: visible;
+    vertical-align: middle;
+
+    &.disabled {
+        @include item-disabled;
+    }
+
+    &.primary {
+        &.mockup {
+            border-color: $color-mock-data;
+            background-color: $color-mock-data;
+        }
+    }
+
+    &.secondary {
+        border-color: $color-fog-light;
+        background-color: $color-white;
+        color: $color-dark;
+
+        &.mockup {
+            border-color: $color-mock-data;
+            background-color: $color-mock-data;
+        }
+    }
+
+    &.tertiary {
+        border-color: $color-fog-light;
+        background-color: $color-white;
+        color: $color-link;
+
+        &.mockup {
+            border-color: $color-mock-data;
+            background-color: $color-mock-data;
+        }
+    }
+
+    &.quaternary {
+        border-color: $color-green;
+        background-color: $color-green;
+
+        &.mockup {
+            border-color: $color-mock-data;
+            background-color: $color-mock-data;
+        }
+    }
+
+    &:focus,
+    &:hover {
+        @include btn-shadow-hover;
+        @include transition;
+
+        &.primary {
+            background-color: $color-accent;
+        }
+
+        &.secondary {
+            border-color: $color-fog-medium;
+            background-color: $color-slate-light;
+        }
+
+        &.tertiary {
+            border-color: $color-link;
+        }
+
+        &.quaternary {
+            background-color: $color-green-dark;
+        }
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
