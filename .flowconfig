@@ -14,5 +14,7 @@ module.file_ext=.md
 module.file_ext=.scss
 module.name_mapper='moment-timezone' -> '<PROJECT_ROOT>/flow/moment-timezone.js.flow'
 module.name_mapper='uuid' -> '<PROJECT_ROOT>/flow/uuid.js.flow'
+module.name_mapper='@fortawesome/react-fontawesome' -> '<PROJECT_ROOT>/flow/@fortawesome/react-fontawesome.js.flow'
+module.name_mapper='@fortawesome/free-solid-svg-icons' -> '<PROJECT_ROOT>/flow/@fortawesome/free-solid-svg-icons.js.flow'
 
 [strict]

@@ -1,0 +1,12 @@
+@import '../../../scss/index';
+
+.fel__title-page {
+    @include typography-h0;
+    margin: 0;
+    padding: 0;
+    color: $color-accent;
+    font-weight: unset;
+    text-align: left;
+    text-transform: none;
+    vertical-align: baseline;
+}

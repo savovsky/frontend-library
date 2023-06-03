@@ -2,7 +2,7 @@ import utils from './utils';
 import validationMessages from '../../../utils/validationMessages';
 import str from '../../../utils/stringsUtils';
 
-const componentName = 'TitlePage';
+const componentName = 'ButtonBack';
 const message = validationMessages(componentName);
 const { propsValidation } = utils;
 
@@ -10,22 +10,22 @@ describe(`${componentName} propsValidation utils`, () => {
     test(`${str.throwsCorrectError}`, () => {
         expect(() => {
             propsValidation();
-        }).toThrow(message.requiredProp('content'));
+        }).toThrow(message.requiredProp('handleOnClick'));
+    });
+
+    test(`${str.throwsCorrectError}`, () => {
+        const handleOnClick = {};
+
+        expect(() => {
+            propsValidation(handleOnClick);
+        }).toThrow(message.mustBeFunction('handleOnClick'));
     });
 
     test(`${str.doesNotThrowAnError}`, () => {
-        const content = 'foo';
+        const handleOnClick = jest.fn();
 
         expect(() => {
-            propsValidation(content);
-        }).not.toThrow();
-    });
-
-    test(`${str.doesNotThrowAnError}`, () => {
-        const content = {};
-
-        expect(() => {
-            propsValidation(content);
+            propsValidation(handleOnClick);
         }).not.toThrow();
     });
 });

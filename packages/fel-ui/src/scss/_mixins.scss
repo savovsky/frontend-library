@@ -93,7 +93,7 @@
     0 9px 46px 8px map-get($color-shadow-light, '3');
 }
 
-@mixin icon-botton {
+@mixin icon-button {
     @include typography-title3;
     margin: 0;
     padding: 0;

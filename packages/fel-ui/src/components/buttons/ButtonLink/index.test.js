@@ -5,7 +5,7 @@ import ButtonLink from '.';
 
 afterEach(cleanup);
 
-describe('<ButtonBasic />', () => {
+describe('<ButtonLink />', () => {
     const testMsg = 'Should render Component correctly';
     const componentId = 'fel-button-link';
     const handleOnClick = jest.fn();

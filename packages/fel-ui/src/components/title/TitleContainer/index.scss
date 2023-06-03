@@ -1,0 +1,20 @@
+@import '../../../scss/index';
+
+.fel__title-container {
+    @include typography-h1;
+    color: $color-accent;
+    text-align: left;
+    text-transform: none;
+
+    &.primary {
+        color: $color-accent;
+    }
+
+    &.secondary {
+        color: $color-secondary;
+    }
+
+    &.tertiary {
+        color: $color-warn-dark;
+    }
+}
