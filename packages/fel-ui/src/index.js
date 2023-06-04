@@ -13,6 +13,7 @@ import LoaderSpin from './components/loaders/LoaderSpin';
 import TitleContainer from './components/title/TitleContainer';
 import TitlePage from './components/title/TitlePage';
 import Tooltip from './components/Tooltip';
+import TruncateWrapper from './components/TruncateWrapper';
 
 export {
     Breadcrumbs,
@@ -28,4 +29,5 @@ export {
     TitleContainer,
     TitlePage,
     Tooltip,
+    TruncateWrapper,
 };
