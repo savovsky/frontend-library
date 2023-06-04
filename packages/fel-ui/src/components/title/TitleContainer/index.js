@@ -13,7 +13,7 @@ type Props = {
     padding?: string,
     /** What CSS 'text-transform' value to use? *(e.g. 'lowercase', 'uppercase', 'none', etc.)* */
     textTransform?: string,
-    /** Whhat title style to use? */
+    /** What title style to use? */
     mode?: 'primary' | 'secondary' | 'tertiary',
     /** What 'data-testid' to use for the component? */
     dataTestid?: string,

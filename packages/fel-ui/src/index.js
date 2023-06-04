@@ -12,6 +12,7 @@ import LoaderLine from './components/loaders/LoaderLine';
 import LoaderSpin from './components/loaders/LoaderSpin';
 import TitleContainer from './components/title/TitleContainer';
 import TitlePage from './components/title/TitlePage';
+import Tooltip from './components/Tooltip';
 
 export {
     Breadcrumbs,
@@ -26,4 +27,5 @@ export {
     LoaderSpin,
     TitleContainer,
     TitlePage,
+    Tooltip,
 };

@@ -1,0 +1,58 @@
+@import '../../scss/index';
+
+$offset-self: calc(100% + 10px);
+$offset: calc(50%);
+$trans-val: -50%;
+
+.fel__tooltip-container {
+    display: inline-flex;
+    position: relative;
+}
+
+.fel__tooltip-body {
+    @include typography-subtitle4;
+    @include card-shadow;
+    @include fade-in;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color: $color-fog;
+    color: $color-white;
+    line-height: normal;
+    text-align: center;
+    text-transform: none;
+    z-index: 100;
+
+    &.fel__top {
+        bottom: $offset-self;
+        left: $offset;
+        transform: translateX($trans-val);
+    }
+
+    &.fel__bottom {
+        top: $offset-self;
+        left: $offset;
+        transform: translateX($trans-val);
+    }
+
+    &.fel__right {
+        top: $offset;
+        left: $offset-self;
+        transform: translateY($trans-val);
+    }
+
+    &.fel__left {
+        top: $offset;
+        right: $offset-self;
+        transform: translateY($trans-val);
+    }
+
+    &.fel__light-tooltip {
+        background-color: $color-white;
+        color: $color-dark;
+    }
+}

@@ -44,7 +44,7 @@
     animation: fade-in ease-in-out 0.5s;
 }
 
-@mixin fade-in {
+@mixin zoom-in {
     animation: zoom-in ease 0.5s;
 }
 
