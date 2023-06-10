@@ -1,0 +1,49 @@
+.fel__combo-box-wrapper {
+    position: relative;
+    font-size: initial;
+
+    &.mockup {
+        .fel__text-input {
+            border-color: $color-mock-data;
+        }
+    }
+}
+
+.fel__combo-text-input-button {
+    @include icon-button;
+    position: absolute;
+    top: 23px;
+    right: 3px;
+    border-radius: 50%;
+    font-size: 18px;
+
+    .fa-down {
+        padding: 4px 8px 10px;
+    }
+
+    .fa-up {
+        padding: 10px 8px 4px;
+    }
+}
+
+.fel__combo-options-container {
+    @include options-container;
+    display: flex;
+    top: 60px;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 2px);
+}
+
+.fel__combo-box-options-list {
+    @include transitions;
+    @include options-list;
+    // height: It is coming dynamiclly inline, because of expand animation
+    // max-height: It is coming as component prop (inline style)
+    overflow-y: auto;
+}
+
+.fel__combo-options-no-matches {
+    @include conatiner-no-items;
+    padding: 0;
+}

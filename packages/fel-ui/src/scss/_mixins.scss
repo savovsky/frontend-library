@@ -137,3 +137,93 @@
         pointer-events: none;
     }
 }
+
+// -----
+
+@mixin text-input {
+    @include transition;
+    @include typography-title1;
+    min-width: 50px;
+    padding: 5px 10px;
+    border: 1px solid $color-fog-light;
+    border-radius: 2px;
+    outline: none;
+    color: $color-dark;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    @supports (-moz-appearance: none) {
+        text-overflow: ellipsis ellipsis;
+    }
+}
+
+@mixin container-heading {
+    @include typography-title1;
+    color: $color-secondary;
+}
+
+@mixin container-labels {
+    @include typography-body2;
+    color: $color-fog;
+    text-transform: capitalize;
+}
+
+@mixin message {
+    @include typography-title1;
+    word-wrap: break-word;
+}
+
+@mixin options-container {
+    position: absolute;
+    min-width: 90px;
+    min-height: 36px;
+    background-color: $color-white;
+    z-index: 1;
+}
+
+@mixin options-list {
+    @include typography-subtitle1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    outline: unset;
+    background-color: $color-white;
+    text-align: left;
+    text-transform: capitalize;
+    cursor: pointer;
+    list-style-type: none;
+
+    li {
+        padding: 10px;
+        outline: unset;
+        color: $color-fog;
+
+        &.current-option {
+            background-color: $color-slate-ultra-light;
+            color: $color-primary;
+        }
+
+        &:focus,
+        &:hover {
+            transition: background-color 0.2s ease-out;
+            border-radius: 2px;
+            background-color: $color-slate-medium;
+        }
+
+        .fel__current-option-icon {
+            display: inline-block;
+            min-width: 25px;
+
+            .fa-check {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+@mixin border-bottom-medium {
+    border-bottom: 1px solid $color-fog-light;
+}
+
+@mixin border-bottom-light {
+    border-bottom: 1px solid $color-slate;
+}

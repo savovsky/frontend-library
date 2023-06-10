@@ -70,6 +70,7 @@ function Tooltip({
     };
 
     const handleOnKeyPress = (e: SyntheticKeyboardEvent<>) => {
+        /* istanbul ignore else */
         if (e.key === 'Enter') {
             setIsVisible(false);
         }

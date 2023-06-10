@@ -1,0 +1,20 @@
+.fel__chip-wrapper {
+    display: inline-flex;
+    align-items: center;
+    min-width: 50px;
+    padding: 4px 6px;
+    border: 1px solid $color-fog-light;
+    border-radius: 10px;
+    background-color: $color-white;
+}
+
+.fel__chip-content {
+    @include typography-subtitle4;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    @supports (-moz-appearance: none) {
+        text-overflow: ellipsis ellipsis;
+    }
+}

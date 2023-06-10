@@ -1,0 +1,92 @@
+.fel__select-wrapper {
+    position: relative;
+    margin: 0 0 25px;
+    font-size: initial;
+
+    &:focus,
+    &:hover {
+        .fel__select_label {
+            color: $color-dark;
+
+            &.disabled {
+                color: $color-fog-medium;
+                cursor: default;
+            }
+        }
+    }
+
+    &.table {
+        margin: 0;
+        padding: 0;
+    }
+
+    &.mockup {
+        .fel__select_displayed-option-wrapper {
+            border-color: $color-mock-data;
+        }
+    }
+}
+
+.fel__select_label {
+    @include text-input-lable;
+    cursor: pointer;
+}
+
+.fel__select_placeholder {
+    color: $color-fog-medium;
+}
+
+.fel__select_displayed-option-wrapper {
+    @include display-flex;
+    @include transition;
+    @include typography-title1;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 25px);
+    height: 24px;
+    padding: 5px 10px;
+    border: 1px solid $color-fog-light;
+    border-radius: 2px;
+    outline: unset;
+    color: $color-dark;
+
+    .fa-select {
+        padding: 0 0 6px;
+    }
+
+    &.table {
+        padding: 0 10px;
+        background-color: $color-white;
+    }
+
+    &.disabled {
+        background-color: $color-slate-light;
+        color: $color-fog;
+
+        .fa-select {
+            color: $color-fog-medium;
+        }
+    }
+
+    &:focus,
+    &:hover {
+        border-color: $color-fog-medium;
+        cursor: pointer;
+
+        &.disabled {
+            border-color: $color-fog-light;
+            cursor: default;
+        }
+    }
+}
+
+.fel__select-options-list {
+    @include options-container;
+    @include options-list;
+    width: calc(100% - 5px);
+
+    &.table {
+        top: 25px;
+        min-width: 50px;
+    }
+}

@@ -1,0 +1,211 @@
+$label-offset: 8px;
+$switch-thumb: 16px;
+
+@mixin mockup-style {
+    &.mockup {
+        &::before {
+            background-color: $color-mock-data;
+        }
+    }
+}
+
+.fel__switch {
+    display: inline-block;
+    position: relative;
+    width: calc(#{$switch-thumb} * 1.8);
+    height: $switch-thumb;
+    padding: 0;
+    color: $color-fog-medium;
+    cursor: pointer;
+
+    &.disabled {
+        @include item-disabled;
+    }
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        cursor: inherit;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    &:focus-within,
+    &:hover {
+        @include transition;
+
+        .fel__switch-track {
+            &::before {
+                @include btn-shadow-hover;
+                top: -0.5px;
+                width: calc(#{$switch-thumb} + 0.5px);
+                height: calc(#{$switch-thumb} + 0.5px);
+            }
+        }
+    }
+}
+
+.fel__switch-track {
+    display: inline-block;
+    width: 100%;
+    height: calc(#{$switch-thumb} * 0.7);
+    margin-top: calc((#{$switch-thumb} - #{$switch-thumb} * 0.7)/2);
+    padding: 0;
+    border-radius: 7px;
+    background-color: $color-fog-light;
+    vertical-align: top;
+
+    &::before {
+        @include btn-shadow;
+        position: absolute;
+        top: 0;
+        right: calc(#{$switch-thumb} * 0.8);
+        width: $switch-thumb;
+        height: $switch-thumb;
+        transition: 0.4s;
+        border-radius: 50%;
+        background-color: $color-white;
+        content: '';
+    }
+
+    @include mockup-style;
+
+    &.on {
+        &::before {
+            right: 20px;
+            transform: translateX(20px);
+        }
+
+        &.primary {
+            background-color: $color-green-transparent;
+
+            &::before {
+                background-color: $color-green-dark;
+            }
+        }
+
+        &.secondary {
+            background-color: $color-primary-transparent;
+
+            &::before {
+                background-color: $color-primary;
+            }
+
+            @include mockup-style;
+        }
+
+        &.tertiary {
+            background-color: $color-fog-light;
+
+            &::before {
+                background-color: $color-fog;
+            }
+
+            @include mockup-style;
+        }
+    }
+}
+
+.fel__checkbox-radio {
+    @include icon-button;
+    display: inline-block;
+    position: relative;
+    color: $color-fog;
+    font-size: 18px;
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% -1px);
+        margin: 0;
+        padding: 0;
+        cursor: inherit;
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+.fel__input-labeled {
+    @include typography-title3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-fog-light;
+    cursor: pointer;
+
+    &.active-radio {
+        cursor: default;
+        pointer-events: none;
+    }
+
+    &.disabled {
+        @include item-disabled;
+    }
+
+    &:focus-within,
+    &:focus,
+    &:hover {
+        color: $color-dark;
+
+        .fel__checkbox-radio {
+            @include tarnsition;
+            color: $color-accent;
+
+            &.active {
+                color: $color-fog;
+            }
+        }
+
+        .fel__switch {
+            @include tarnsition;
+
+            .fel__switch-track {
+                &::before {
+                    @include btn-shadow-hover;
+                    top: -0.5px;
+                    width: calc(#{$switch-thumb} + 0.5px);
+                    height: calc(#{$switch-thumb} + 0.5px);
+                }
+            }
+        }
+    }
+
+    &.top {
+        flex-direction: column-reverse;
+
+        .fel__input-labeled_label {
+            margin-bottom: $label-offset;
+        }
+    }
+
+    &.right {
+        flex-direction: row;
+
+        .fel__input-labeled_label {
+            margin-left: $label-offset;
+        }
+    }
+
+    &.bottom {
+        flex-direction: column;
+
+        .fel__input-labeled_label {
+            margin-top: $label-offset;
+        }
+    }
+
+    &.left {
+        flex-direction: row-reverse;
+
+        .fel__input-labeled_label {
+            margin-right: $label-offset;
+        }
+    }
+}

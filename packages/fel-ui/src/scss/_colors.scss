@@ -7,6 +7,7 @@ $color-fog-light: #c6c7c9;
 $color-slate: #dcdee1;
 $color-slate-medium: #ebedf0;
 $color-slate-light: #f5f6f8;
+$color-slate-ultra-light: #f9fafc;
 $color-crimson: #cc0000;
 $color-crimson-light: #ff0000;
 $color-blue: #0098f0;
@@ -29,8 +30,8 @@ $color-mock-data: $color-yell;
 $color-table-accent: $color-ignite;
 $color-modal-overlay: rgba(80, 80, 80, 0.80);
 $color-modal-overlay-light: rgba(240, 240, 240, 0.80);
-$color-accent-transparent: rgba(240, 83, 35, 0.50); // TODO Reaname to '$color-transparent-accent'
-$color-green-transparent: rgba(115, 165, 0, 0.40); // TODO Reaname to '$color-transparent-green'
+$color-primary-transparent: rgba(20, 103, 70, 0.50);
+$color-green-transparent: rgba(115, 165, 0, 0.40);
 
 
 $color-shadow: (

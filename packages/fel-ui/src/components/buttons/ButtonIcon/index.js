@@ -11,7 +11,7 @@ import utils from './utils';
 type Props = {
     /** Handle the onClick event */
     handleOnClick: Function,
-    /** Whhat icon to use? */
+    /** What icon to use? */
     icon: 'edit' | 'trash' | 'times',
     /** What button label to use? */
     label?: string,
@@ -25,7 +25,7 @@ type Props = {
     margin?: string,
     /** What CSS 'text-transform' value to use for the label? *(e.g. 'lowercase', 'uppercase', 'none', etc.)* */
     textTransform?: string,
-    /** Is the link disabled? */
+    /** Is the button disabled? */
     isDisabled?: boolean,
     /** Is the link mock? */
     isMockedData?: boolean, // TODO Rename 'isMockedData' to 'isMock'

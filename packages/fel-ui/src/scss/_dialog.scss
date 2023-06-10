@@ -1,0 +1,38 @@
+.fel__dialog-header {
+    @include display-flex;
+    @include border-bottom-light;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 15px;
+    padding: 8px 0;
+}
+
+.fel__dialog-spinner-wrapper {
+    @include display-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.fel__dialog-content {
+    @include display-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100px;
+}
+
+.fel__dialog-body {
+    @include fade-in;
+    @include typography-title1;
+    color: $color-fog;
+    line-height: 1.4;
+}
+
+.fel__dialog-footer {
+    @include display-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 25px 0 0;
+}

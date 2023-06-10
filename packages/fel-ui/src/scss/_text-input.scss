@@ -1,0 +1,61 @@
+.fel__text-input_conatiner {
+    @include fade-in;
+    font-size: initial;
+
+    &.combo-box {
+        width: unset;
+    }
+}
+
+.fel__text-input_wrapper {
+    @include transition;
+
+    &:focus,
+    &:hover {
+        .fel__text-input {
+            border-color: $color-fog-medium;
+        }
+
+        .fel__text-input_label {
+            color: $color-dark;
+        }
+    }
+
+    &.disabled {
+        &:hover {
+            .fel__text-input {
+                border-color: $color-fog-light;
+            }
+        }
+
+        .fel__text-input {
+            background-color: $color-slate-light;
+            color: $color-fog;
+        }
+
+        .fel__text-input_label {
+            color: $color-fog-medium;
+        }
+    }
+}
+
+.fel__text-input {
+    @include text-input;
+    width: 100%;
+    height: 36px;
+}
+
+.fel__text-input_label {
+    @include text-input-label;
+}
+
+.fel__text-input_error-msg {
+    @include typography-body2;
+    width: 100%;
+    min-height: 25px;
+    padding: 5px 10px;
+    color: $color-warn;
+    line-height: normal;
+    text-align: right;
+    box-sizing: content-box;
+}
