@@ -106,7 +106,7 @@ function CheckBoxBasic({
         >
             {conditionalContent()}
             <input
-                itemID={inputId}
+                id={inputId}
                 type="checkbox"
                 aria-checked={isChecked}
                 checked={isChecked}

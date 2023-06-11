@@ -6,6 +6,7 @@ import ButtonBasic from './components/buttons/ButtonBasic';
 import ButtonIcon from './components/buttons/ButtonIcon';
 import ButtonLink from './components/buttons/ButtonLink';
 import CheckBoxBasic from './components/checkboxes/CheckBoxBasic';
+import CheckBoxLabeled from './components/checkboxes/CheckBoxLabeled';
 import ItemLabeled from './components/ItemLabeled';
 import ItemLabeledColored from './components/ItemLabeledColored';
 import ItemLink from './components/ItemLink';
@@ -23,6 +24,7 @@ export {
     ButtonIcon,
     ButtonLink,
     CheckBoxBasic,
+    CheckBoxLabeled,
     ItemLabeled,
     ItemLabeledColored,
     ItemLink,

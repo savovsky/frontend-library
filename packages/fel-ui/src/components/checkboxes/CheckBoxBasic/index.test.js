@@ -38,7 +38,7 @@ describe('<CheckBoxBasic />', () => {
         expect(checkboxInput.checked).toEqual(true);
     });
 
-    test(`${testMsg} with provided default props`, () => {
+    test(`${testMsg} with provided props`, () => {
         const { getByTestId } = render(
             <CheckBoxBasic
                 inputId={inputId}
