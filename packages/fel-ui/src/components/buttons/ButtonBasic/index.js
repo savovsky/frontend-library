@@ -11,7 +11,7 @@ type Props = {
     handleOnClick: Function,
     /** What button label (content) to use? */
     content: string | React.Node,
-    /** Whhat button style to use? */
+    /** What button style to use? */
     mode?: 'primary' | 'secondary' | 'tertiary' | 'quaternary',
     /** What CSS 'margin' value to use? *(Provide units, e.g. px)* */
     margin?: string,
