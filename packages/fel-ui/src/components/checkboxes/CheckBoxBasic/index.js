@@ -72,7 +72,7 @@ function CheckBoxBasic({
                 : `${defaultClass} active`;
         }
 
-        return isDisabled ? `${defaultClass} isDisabled` : defaultClass;
+        return isDisabled ? `${defaultClass} disabled` : defaultClass;
     };
 
     const conditionalContent = () => {
@@ -102,9 +102,6 @@ function CheckBoxBasic({
             className={conditionalClassName()}
             disabled={isDisabled}
             style={{ margin }}
-            // aria-label={arialabel}
-            // type="button"
-            // onClick={handleOnClick}
             {...moreProps}
         >
             {conditionalContent()}

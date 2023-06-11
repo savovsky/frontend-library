@@ -36,7 +36,7 @@
 }
 
 .fel__combo-box-options-list {
-    @include transitions;
+    @include transition;
     @include options-list;
     // height: It is coming dynamiclly inline, because of expand animation
     // max-height: It is coming as component prop (inline style)
@@ -44,6 +44,6 @@
 }
 
 .fel__combo-options-no-matches {
-    @include conatiner-no-items;
+    @include container-no-items;
     padding: 0;
 }

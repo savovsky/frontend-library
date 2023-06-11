@@ -2,9 +2,10 @@
 
 import Breadcrumbs from './components/Breadcrumbs';
 import ButtonBack from './components/buttons/ButtonBack';
+import ButtonBasic from './components/buttons/ButtonBasic';
 import ButtonIcon from './components/buttons/ButtonIcon';
 import ButtonLink from './components/buttons/ButtonLink';
-import ButtonBasic from './components/buttons/ButtonBasic';
+import CheckBoxBasic from './components/checkboxes/CheckBoxBasic';
 import ItemLabeled from './components/ItemLabeled';
 import ItemLabeledColored from './components/ItemLabeledColored';
 import ItemLink from './components/ItemLink';
@@ -19,8 +20,9 @@ export {
     Breadcrumbs,
     ButtonBack,
     ButtonBasic,
-    ButtonLink,
     ButtonIcon,
+    ButtonLink,
+    CheckBoxBasic,
     ItemLabeled,
     ItemLabeledColored,
     ItemLink,

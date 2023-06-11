@@ -123,7 +123,7 @@ $switch-thumb: 16px;
         top: 0;
         left: 0;
         width: 100%;
-        height: calc(100% -1px);
+        height: calc(100% - 1px);
         margin: 0;
         padding: 0;
         cursor: inherit;
@@ -155,7 +155,7 @@ $switch-thumb: 16px;
         color: $color-dark;
 
         .fel__checkbox-radio {
-            @include tarnsition;
+            @include transition;
             color: $color-accent;
 
             &.active {
@@ -164,7 +164,7 @@ $switch-thumb: 16px;
         }
 
         .fel__switch {
-            @include tarnsition;
+            @include transition;
 
             .fel__switch-track {
                 &::before {
