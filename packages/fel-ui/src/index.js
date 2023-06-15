@@ -12,6 +12,7 @@ import ItemLabeledColored from './components/ItemLabeledColored';
 import ItemLink from './components/ItemLink';
 import LoaderLine from './components/loaders/LoaderLine';
 import LoaderSpin from './components/loaders/LoaderSpin';
+import SwitchBasic from './components/switches/SwitchBasic';
 import TitleContainer from './components/title/TitleContainer';
 import TitlePage from './components/title/TitlePage';
 import Tooltip from './components/Tooltip';
@@ -30,6 +31,7 @@ export {
     ItemLink,
     LoaderLine,
     LoaderSpin,
+    SwitchBasic,
     TitleContainer,
     TitlePage,
     Tooltip,
