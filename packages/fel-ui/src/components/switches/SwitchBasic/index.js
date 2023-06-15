@@ -8,7 +8,7 @@ import './index.scss';
 // import utils from './utils';
 
 type Props = {
-    /** What checkbox id to use? */
+    /** What switch id to use? */
     inputId: string,
     /** Handle the onClick event */
     handleOnClick: Function,
@@ -22,7 +22,7 @@ type Props = {
     isMockedData?: boolean,
     /** What 'data-testid' to use for the component? */
     dataTestid?: string,
-    /** Is the checkbox disabled? */
+    /** Is the switch disabled? */
     isDisabled?: boolean,
     /** What 'aria-label' label to use? */
     arialabel?: string,

@@ -13,6 +13,7 @@ import ItemLink from './components/ItemLink';
 import LoaderLine from './components/loaders/LoaderLine';
 import LoaderSpin from './components/loaders/LoaderSpin';
 import SwitchBasic from './components/switches/SwitchBasic';
+import SwitchLabeled from './components/switches/SwitchLabeled';
 import TitleContainer from './components/title/TitleContainer';
 import TitlePage from './components/title/TitlePage';
 import Tooltip from './components/Tooltip';
@@ -32,6 +33,7 @@ export {
     LoaderLine,
     LoaderSpin,
     SwitchBasic,
+    SwitchLabeled,
     TitleContainer,
     TitlePage,
     Tooltip,
