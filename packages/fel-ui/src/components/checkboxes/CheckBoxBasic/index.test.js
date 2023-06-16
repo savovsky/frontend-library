@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
-// import { userEvent } from '@testing-library/user-event';
+import userEvent from '@testing-library/user-event';
 
 import CheckBoxBasic from '.';
 
@@ -53,6 +53,15 @@ describe('<CheckBoxBasic />', () => {
 
         expect(checkbox).toBeTruthy();
         expect(checkbox).toHaveClass('disabled');
+        expect(checkbox.querySelector('svg')).toHaveAttribute(
+            'data-icon',
+            'check-square',
+        );
+        expect(checkboxInput.checked).toEqual(true);
+
+        userEvent.click(checkboxInput);
+
+        expect(handleOnClick).not.toHaveBeenCalled();
         expect(checkbox.querySelector('svg')).toHaveAttribute(
             'data-icon',
             'check-square',

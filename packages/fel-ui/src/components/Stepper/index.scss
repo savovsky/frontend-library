@@ -1,0 +1,63 @@
+@import '../../scss/index';
+
+.fel__stepper-wrapper {
+    display: inline-flex;
+}
+
+.fel__stepper-item-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 50px;
+    padding: 0;
+}
+
+.fel__stepper-item {
+    @include display-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fel__stepper-connector {
+    position: absolute;
+    top: 11px;
+    right: calc(50% + 20px);
+    left: calc(-50% + 20px);
+}
+
+.fel__stepper-connector-line {
+    display: block;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: $color-fog-light;
+
+    &.completed {
+        border-color: $color-fog-medium;
+    }
+}
+
+.fel__stepper-item-mark {
+    @include typography-title1;
+    width: 17px;
+    height: 17px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: $color-fog-medium;
+    color: $color-white;
+    text-align: center;
+
+    &.completed {
+        background-color: $color-primary;
+    }
+}
+
+.fel__stepper-item-content {
+    @include typography-subtitle4;
+    margin: 8px 0 0;
+    color: $color-fog-medium;
+    text-align: center;
+    word-break: break-word;
+
+    &.completed {
+        color: $color-fog;
+    }
+}

@@ -63,6 +63,6 @@ import { Breadcrumbs } from '@savovsky/fel-ui';
 
 check Storybook: Canvas / **Controls**
 
-check Storybook: [**Docs**](https://www.savovsky.com/fel/?path=/docs/ui-buttons-breadcrumbs--default)
+check Storybook: [**Docs**](https://www.savovsky.com/fel/?path=/docs/ui-breadcrumbs--default)
 
 &nbsp;

@@ -12,6 +12,7 @@ import ItemLabeledColored from './components/ItemLabeledColored';
 import ItemLink from './components/ItemLink';
 import LoaderLine from './components/loaders/LoaderLine';
 import LoaderSpin from './components/loaders/LoaderSpin';
+import Stepper from './components/Stepper';
 import SwitchBasic from './components/switches/SwitchBasic';
 import SwitchLabeled from './components/switches/SwitchLabeled';
 import TitleContainer from './components/title/TitleContainer';
@@ -32,6 +33,7 @@ export {
     ItemLink,
     LoaderLine,
     LoaderSpin,
+    Stepper,
     SwitchBasic,
     SwitchLabeled,
     TitleContainer,
