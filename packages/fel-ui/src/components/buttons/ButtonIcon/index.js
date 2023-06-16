@@ -2,7 +2,13 @@
 
 import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faTrashAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {
+    faEdit,
+    faTrashAlt,
+    faTimes,
+    faCopy,
+    faClone,
+} from '@fortawesome/free-solid-svg-icons';
 
 import './index.scss';
 
@@ -12,7 +18,7 @@ type Props = {
     /** Handle the onClick event */
     handleOnClick: Function,
     /** What icon to use? */
-    icon: 'edit' | 'trash' | 'times',
+    icon: 'edit' | 'trash' | 'times' | 'copy' | 'clone',
     /** What button label to use? */
     label?: string,
     /** What 'aria-label' label to use? */
@@ -80,6 +86,8 @@ function ButtonIcon({
             edit: faEdit,
             trash: faTrashAlt,
             times: faTimes,
+            copy: faCopy,
+            clone: faClone,
         };
 
         return icons[icon];
