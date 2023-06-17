@@ -7,6 +7,7 @@ import ButtonIcon from './components/buttons/ButtonIcon';
 import ButtonLink from './components/buttons/ButtonLink';
 import CheckBoxBasic from './components/checkboxes/CheckBoxBasic';
 import CheckBoxLabeled from './components/checkboxes/CheckBoxLabeled';
+import ChipWithButton from './components/chips/ChipWithButton';
 import CopyToClipboard from './components/CopyToClipboard';
 import ItemLabeled from './components/ItemLabeled';
 import ItemLabeledColored from './components/ItemLabeledColored';
@@ -30,6 +31,7 @@ export {
     ButtonLink,
     CheckBoxBasic,
     CheckBoxLabeled,
+    ChipWithButton,
     CopyToClipboard,
     ItemLabeled,
     ItemLabeledColored,

@@ -8,6 +8,7 @@ import {
     faTimes,
     faCopy,
     faClone,
+    faTimesCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 import './index.scss';
@@ -88,6 +89,7 @@ function ButtonIcon({
             times: faTimes,
             copy: faCopy,
             clone: faClone,
+            'times-circle': faTimesCircle,
         };
 
         return icons[icon];

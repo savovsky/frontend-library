@@ -3,7 +3,7 @@
 import validationMessages from '../../../utils/validationMessages';
 
 const message = validationMessages('ButtonIcon');
-const iconOptions = ['edit', 'trash', 'times', 'copy', 'clone'];
+const iconOptions = ['edit', 'trash', 'times', 'copy', 'clone', 'times-circle'];
 const sizeOptions = ['xs', 'sm', 'lg', '1x', '2x', '3x'];
 const placementOptions = ['top', 'right', 'bottom', 'left'];
 
