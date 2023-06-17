@@ -41,7 +41,7 @@ function ContainerHeader({
             >
                 <CollapseArrow isOpen={isOpen} />
                 <TitleContainer
-                    title={title}
+                    content={title}
                     padding="0 0 0 10px"
                     textTransform={textTransform}
                 />

@@ -9,6 +9,7 @@ import CheckBoxBasic from './components/checkboxes/CheckBoxBasic';
 import CheckBoxLabeled from './components/checkboxes/CheckBoxLabeled';
 import Chip from './components/chips/Chip';
 import ChipWithButton from './components/chips/ChipWithButton';
+import CollapsibleContainerMain from './components/collapsible_containers/CollapsibleContainerMain';
 import CopyToClipboard from './components/CopyToClipboard';
 import ItemLabeled from './components/ItemLabeled';
 import ItemLabeledColored from './components/ItemLabeledColored';
@@ -34,6 +35,7 @@ export {
     CheckBoxLabeled,
     Chip,
     ChipWithButton,
+    CollapsibleContainerMain,
     CopyToClipboard,
     ItemLabeled,
     ItemLabeledColored,
