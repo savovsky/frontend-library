@@ -1,0 +1,65 @@
+@import '../../../scss/index';
+
+.fel__collapsible-container-main-btn {
+    @include display-flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: unset;
+    outline: none;
+    background-color: unset;
+    font-size: initial;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        .fel__main-container-collapse-arrow,
+        .fel__container-title {
+            color: $color-dark-ignite;
+        }
+    }
+}
+
+.fel__main-container-collapse-arrow {
+    transition: transform 0.3s linear;
+    color: $color-fog;
+
+    &.up {
+        transform: rotate(0deg);
+    }
+
+    &.down {
+        transform: rotate(-180deg);
+    }
+}
+
+.fel__collapsible-container-main-header {
+    @include display-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 10px;
+    padding: 0 5px 0 0;
+
+    &.border {
+        padding: 0 5px 5px 0;
+        border-bottom: 1px solid $color-fog-light;
+    }
+}
+
+.fel__collapsible-container-main-body {
+    // height: It is coming dynamically inline, because of collapse animation
+    min-width: 350px;
+    margin: 0;
+    padding: 0;
+
+    transition:
+    opacity 0.3s ease-in 0.2s,
+    height 0.3s linear,
+    background-color 0.3s linear;
+
+    opacity: 1;
+
+    &.hidden {
+        opacity: 0;
+    }
+}
