@@ -11,6 +11,8 @@ import Chip from './components/chips/Chip';
 import ChipWithButton from './components/chips/ChipWithButton';
 import CollapsibleContainerMain from './components/collapsible_containers/CollapsibleContainerMain';
 import CopyToClipboard from './components/CopyToClipboard';
+import Modal from './components/dialogs/Modal';
+import HttpError from './components/errors/HttpError';
 import ItemLabeled from './components/ItemLabeled';
 import ItemLabeledColored from './components/ItemLabeledColored';
 import ItemLink from './components/ItemLink';
@@ -37,6 +39,8 @@ export {
     ChipWithButton,
     CollapsibleContainerMain,
     CopyToClipboard,
+    Modal,
+    HttpError,
     ItemLabeled,
     ItemLabeledColored,
     ItemLink,

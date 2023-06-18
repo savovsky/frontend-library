@@ -1,0 +1,21 @@
+@import '../../../scss/index';
+
+.fel__modal-overlay {
+    @include display-flex;
+    @include fade-in;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: $color-modal-overlay;
+    z-index: 1000;
+    overflow-y: auto;
+
+
+    &.light {
+        background-color: $color-modal-overlay-light;
+    }
+}

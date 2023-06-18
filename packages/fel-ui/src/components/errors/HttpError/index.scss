@@ -1,0 +1,9 @@
+@import '../../../scss/index';
+
+.fel__http-error {
+    @include message;
+    @include fade-in;
+    color: $color-warn;
+    line-height: 1.2;
+    text-align: left;
+}
