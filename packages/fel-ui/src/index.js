@@ -11,6 +11,7 @@ import Chip from './components/chips/Chip';
 import ChipWithButton from './components/chips/ChipWithButton';
 import CollapsibleContainerMain from './components/collapsible_containers/CollapsibleContainerMain';
 import CopyToClipboard from './components/CopyToClipboard';
+import DialogHeader from './components/dialogs/DialogHeader';
 import Modal from './components/dialogs/Modal';
 import HttpError from './components/errors/HttpError';
 import ItemLabeled from './components/ItemLabeled';
@@ -39,6 +40,7 @@ export {
     ChipWithButton,
     CollapsibleContainerMain,
     CopyToClipboard,
+    DialogHeader,
     Modal,
     HttpError,
     ItemLabeled,
