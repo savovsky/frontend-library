@@ -1,9 +1,5 @@
 @import '../../../scss/index';
 
-.fel__dialog-info-msg {
-    @include typography-title1;
-    @include fade-in;
-    line-height: 1,5;
-    text-align: left;
-    word-wrap: break-word;
+.fel__dialog-confirm-success {
+    color: $color-dark;
 }

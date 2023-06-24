@@ -35,13 +35,13 @@ import { DialogInfo } from '@savovsky/fel-ui';
 
 ...
 
-    const handleOnClose = () => { ... };
+    const handleOnClickClose = () => { ... };
     const someContent = () => <div>Foo</div>;
 
     <DialogInfo
         // REQUIRED props (with examplary values)
         headerTitle="dialog title"
-        handleOnClickClose={handleOnClose}
+        handleOnClickClose={handleOnClickClose}
         content={someContent()}
 
         // EXPOSED OPTIONAL props (with default values)
