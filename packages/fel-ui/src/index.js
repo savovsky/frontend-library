@@ -11,6 +11,7 @@ import Chip from './components/chips/Chip';
 import ChipWithButton from './components/chips/ChipWithButton';
 import CollapsibleContainerMain from './components/collapsible_containers/CollapsibleContainerMain';
 import CopyToClipboard from './components/CopyToClipboard';
+import DialogContainer from './components/dialogs/DialogContainer';
 import DialogConfirmBasic from './components/dialogs/DialogConfirmBasic';
 import DialogHeader from './components/dialogs/DialogHeader';
 import DialogInfo from './components/dialogs/DialogInfo';
@@ -42,6 +43,7 @@ export {
     ChipWithButton,
     CollapsibleContainerMain,
     CopyToClipboard,
+    DialogContainer,
     DialogConfirmBasic,
     DialogHeader,
     DialogInfo,
