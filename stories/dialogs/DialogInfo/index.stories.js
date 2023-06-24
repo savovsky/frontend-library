@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { DialogInfo } from '../../../packages/fel-ui/src';
+import { DialogInfo, DialogContainer } from '../../../packages/fel-ui/src';
 import readMe from '../../../packages/fel-ui/src/components/dialogs/DialogInfo/README.md';
 
 export default {
@@ -45,5 +45,19 @@ export const CustomHeaderTextTransform = Template.bind({});
 CustomHeaderTextTransform.args = {
     headerTitle,
     headerTextTransform: 'uppercase',
+    handleOnClickClose,
+};
+
+const TemplateWithWrapper = args => (
+    <DialogContainer>
+        <DialogInfo {...args} />
+    </DialogContainer>
+);
+
+export const WithinContainer = TemplateWithWrapper.bind({});
+
+WithinContainer.args = {
+    headerTitle,
+    content: demoContent(),
     handleOnClickClose,
 };

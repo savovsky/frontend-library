@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { DialogConfirmBasic } from '../../../packages/fel-ui/src';
+import {
+    DialogConfirmBasic,
+    DialogContainer,
+} from '../../../packages/fel-ui/src';
 import readMe from '../../../packages/fel-ui/src/components/dialogs/DialogConfirmBasic/README.md';
 
 export default {
@@ -87,6 +90,28 @@ ErrorState.args = {
     isLoading: false,
     isSuccess: false,
     isError: true,
+    handleOnClickYes,
+    handleOnClickNo,
+    handleOnClickOk,
+    handleOnClickClose,
+};
+
+const TemplateWithWrapper = args => (
+    <DialogContainer>
+        <DialogConfirmBasic {...args} />
+    </DialogContainer>
+);
+
+export const WithinContainer = TemplateWithWrapper.bind({});
+
+WithinContainer.args = {
+    headerTitle,
+    confirmQuestionContent,
+    successMessageContent: '',
+    errorMessage: '',
+    isLoading: false,
+    isSuccess: false,
+    isError: false,
     handleOnClickYes,
     handleOnClickNo,
     handleOnClickOk,
