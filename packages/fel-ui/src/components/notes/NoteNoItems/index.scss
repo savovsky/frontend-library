@@ -1,0 +1,6 @@
+@import '../../../scss/index';
+
+.fel__note_no-items {
+    @include typography-body3;
+    color: $color-fog;
+}

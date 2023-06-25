@@ -1,0 +1,17 @@
+@import '../../../scss/index';
+
+.fel__note-important {
+    @include typography-title2;
+    padding: 2px 10px;
+    color: $color-fog;
+
+    &.left-aligned {
+        border-left: 5px solid $color-accent;
+        text-align: left;
+    }
+
+    &.right-aligned {
+        border-right: 5px solid $color-accent;
+        text-align: right;
+    }
+}
