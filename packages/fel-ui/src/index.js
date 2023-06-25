@@ -25,6 +25,8 @@ import LoaderLine from './components/loaders/LoaderLine';
 import LoaderSpin from './components/loaders/LoaderSpin';
 import NoteImportant from './components/notes/NoteImportant';
 import NoteNoItems from './components/notes/NoteNoItems';
+import RadioButtonBasic from './components/radioButtons/RadioButtonBasic';
+import RadioButtonLabeled from './components/radioButtons/RadioButtonLabeled';
 import SnackBarInfo from './components/snackbars/SnackBarInfo';
 import Stepper from './components/Stepper';
 import SwitchBasic from './components/switches/SwitchBasic';
@@ -60,6 +62,8 @@ export {
     LoaderSpin,
     NoteImportant,
     NoteNoItems,
+    RadioButtonBasic,
+    RadioButtonLabeled,
     SnackBarInfo,
     Stepper,
     SwitchBasic,
