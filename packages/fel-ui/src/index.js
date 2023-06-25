@@ -15,6 +15,7 @@ import DialogContainer from './components/dialogs/DialogContainer';
 import DialogConfirmBasic from './components/dialogs/DialogConfirmBasic';
 import DialogHeader from './components/dialogs/DialogHeader';
 import DialogInfo from './components/dialogs/DialogInfo';
+import DialogInfoFetch from './components/dialogs/DialogInfoFetch';
 import Modal from './components/dialogs/Modal';
 import HttpError from './components/errors/HttpError';
 import ItemLabeled from './components/ItemLabeled';
@@ -47,6 +48,7 @@ export {
     DialogConfirmBasic,
     DialogHeader,
     DialogInfo,
+    DialogInfoFetch,
     Modal,
     HttpError,
     ItemLabeled,
