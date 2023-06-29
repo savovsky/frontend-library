@@ -5,7 +5,7 @@ import Breadcrumbs from '.';
 
 afterEach(cleanup);
 
-describe('<ButtonIcon />', () => {
+describe('<Breadcrumbs />', () => {
     const testMsg = 'Should render Component correctly';
     const componentId = 'fel-breadcrumbs';
     const handleOnClickOne = jest.fn();

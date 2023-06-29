@@ -27,6 +27,7 @@ import NoteImportant from './components/notes/NoteImportant';
 import NoteNoItems from './components/notes/NoteNoItems';
 import RadioButtonBasic from './components/radioButtons/RadioButtonBasic';
 import RadioButtonLabeled from './components/radioButtons/RadioButtonLabeled';
+import SideNavBarBasic from './components/sideNavBar/SideNavBarBasic';
 import SnackBarInfo from './components/snackbars/SnackBarInfo';
 import Stepper from './components/Stepper';
 import SwitchBasic from './components/switches/SwitchBasic';
@@ -64,6 +65,7 @@ export {
     NoteNoItems,
     RadioButtonBasic,
     RadioButtonLabeled,
+    SideNavBarBasic,
     SnackBarInfo,
     Stepper,
     SwitchBasic,
