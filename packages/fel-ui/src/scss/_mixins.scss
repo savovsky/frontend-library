@@ -305,6 +305,17 @@
     @supports (-moz-appearance: none) {
         text-overflow: ellipsis ellipsis;
     }
+
+    &:focus {
+        @include transition;
+        border-color: $color-fog-medium;
+        background-color: $color-white;
+    }
+
+    &:hover {
+        @include transition;
+        border-color: $color-fog-medium;
+    }
 }
 
 @mixin container-heading {

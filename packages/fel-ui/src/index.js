@@ -32,6 +32,7 @@ import SnackBarInfo from './components/snackbars/SnackBarInfo';
 import Stepper from './components/Stepper';
 import SwitchBasic from './components/switches/SwitchBasic';
 import SwitchLabeled from './components/switches/SwitchLabeled';
+import TextInputBasic from './components/textInputs/TextInputBasic';
 import TitleContainer from './components/title/TitleContainer';
 import TitlePage from './components/title/TitlePage';
 import Tooltip from './components/Tooltip';
@@ -70,6 +71,7 @@ export {
     Stepper,
     SwitchBasic,
     SwitchLabeled,
+    TextInputBasic,
     TitleContainer,
     TitlePage,
     Tooltip,

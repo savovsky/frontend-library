@@ -1,4 +1,4 @@
-.fel__text-input_conatiner {
+.fel__text-input_container {
     @include fade-in;
     font-size: initial;
 
@@ -57,5 +57,5 @@
     color: $color-warn;
     line-height: normal;
     text-align: right;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
