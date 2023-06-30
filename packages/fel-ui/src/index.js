@@ -25,6 +25,7 @@ import LoaderLine from './components/loaders/LoaderLine';
 import LoaderSpin from './components/loaders/LoaderSpin';
 import NoteImportant from './components/notes/NoteImportant';
 import NoteNoItems from './components/notes/NoteNoItems';
+import Paginator from './components/pagination/Paginator';
 import RadioButtonBasic from './components/radioButtons/RadioButtonBasic';
 import RadioButtonLabeled from './components/radioButtons/RadioButtonLabeled';
 import SideNavBarBasic from './components/sideNavBar/SideNavBarBasic';
@@ -64,6 +65,7 @@ export {
     LoaderSpin,
     NoteImportant,
     NoteNoItems,
+    Paginator,
     RadioButtonBasic,
     RadioButtonLabeled,
     SideNavBarBasic,
