@@ -1,0 +1,6 @@
+@import '../../../scss/index';
+
+.fel__pagination_items-displayed {
+    @include typography-title3;
+    color: $color-fog;
+}

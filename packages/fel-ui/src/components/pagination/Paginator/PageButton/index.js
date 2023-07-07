@@ -11,7 +11,7 @@ type Props = {
     handleOnClickPage: Function,
 };
 
-function NextButton({
+function PageButton({
     buttonIndex,
     currentPage,
     totalPagesCount,
@@ -57,4 +57,4 @@ function NextButton({
     );
 }
 
-export default NextButton;
+export default PageButton;
