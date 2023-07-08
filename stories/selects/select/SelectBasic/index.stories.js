@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SelectBasic } from '../../../../packages/fel-ui/src';
-import readMe from '../../../../packages/fel-ui/src/components/selects/select/SelectBasic';
+import readMe from '../../../../packages/fel-ui/src/components/selects/select/SelectBasic/README.md';
 import mock from '../optionsMock';
 
 export default {

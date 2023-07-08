@@ -26,6 +26,7 @@ import LoaderSpin from './components/loaders/LoaderSpin';
 import NoteImportant from './components/notes/NoteImportant';
 import NoteNoItems from './components/notes/NoteNoItems';
 import ItemsDisplayed from './components/pagination/ItemsDisplayed';
+import ItemsPerPage from './components/pagination/ItemsPerPage';
 import Paginator from './components/pagination/Paginator';
 import RadioButtonBasic from './components/radioButtons/RadioButtonBasic';
 import RadioButtonLabeled from './components/radioButtons/RadioButtonLabeled';
@@ -68,6 +69,7 @@ export {
     NoteImportant,
     NoteNoItems,
     ItemsDisplayed,
+    ItemsPerPage,
     Paginator,
     RadioButtonBasic,
     RadioButtonLabeled,

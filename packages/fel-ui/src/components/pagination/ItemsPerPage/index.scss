@@ -1,0 +1,17 @@
+@import '../../../scss/index';
+
+.fel__pagination_items-per-page {
+    @include display-flex;
+    @include typography-title3;
+    align-items: center;
+    color: $color-fog;
+
+    .fel__select-wrapper {
+        margin: 0 20px 0 10px;
+    }
+
+    .fel__select_label {
+        display: initial;
+        padding: 0;
+    }
+}
