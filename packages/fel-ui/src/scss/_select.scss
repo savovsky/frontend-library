@@ -50,8 +50,12 @@
     outline: unset;
     color: $color-dark;
 
-    .fa-select {
+    .fa-select-down {
         padding: 0 0 6px;
+    }
+
+    .fa-select-up {
+        padding: 7px 0 0;
     }
 
     &.table {
@@ -63,7 +67,7 @@
         background-color: $color-slate-light;
         color: $color-fog;
 
-        .fa-select {
+        .fa-select-down {
             color: $color-fog-medium;
         }
     }

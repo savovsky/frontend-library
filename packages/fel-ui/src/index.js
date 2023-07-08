@@ -29,6 +29,7 @@ import ItemsDisplayed from './components/pagination/ItemsDisplayed';
 import Paginator from './components/pagination/Paginator';
 import RadioButtonBasic from './components/radioButtons/RadioButtonBasic';
 import RadioButtonLabeled from './components/radioButtons/RadioButtonLabeled';
+import SelectBasic from './components/selects/select/SelectBasic';
 import SideNavBarBasic from './components/sideNavBar/SideNavBarBasic';
 import SnackBarInfo from './components/snackbars/SnackBarInfo';
 import Stepper from './components/Stepper';
@@ -70,6 +71,7 @@ export {
     Paginator,
     RadioButtonBasic,
     RadioButtonLabeled,
+    SelectBasic,
     SideNavBarBasic,
     SnackBarInfo,
     Stepper,
