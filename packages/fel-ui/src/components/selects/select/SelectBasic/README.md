@@ -67,6 +67,6 @@ import { SelectBasic } from '@savovsky/fel-ui';
 
 check Storybook: Canvas / **Controls**
 
-check Storybook: [**Docs**](https://www.savovsky.com/fel/?path=/docs/ui-selects-selectbasic--default)
+check Storybook: [**Docs**](https://www.savovsky.com/fel/?path=/docs/ui-selects-select-selectbasic--default)
 
 &nbsp;

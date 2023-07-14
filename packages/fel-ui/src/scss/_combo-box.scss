@@ -41,6 +41,10 @@
     // height: It is coming dynamiclly inline, because of expand animation
     // max-height: It is coming as component prop (inline style)
     overflow-y: auto;
+
+    li {
+        display: flex;
+    }
 }
 
 .fel__combo-options-no-matches {

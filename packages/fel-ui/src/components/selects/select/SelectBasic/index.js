@@ -49,7 +49,7 @@ type Props = {
 
 /**
  * Component props: check Storybook
- * [**Docs**](https://www.savovsky.com/fel/?path=/docs/ui-selects-selectbasic--default)
+ * [**Docs**](https://www.savovsky.com/fel/?path=/docs/ui-selects-select-selectbasic--default)
  */
 function SelectBasic({
     selectId,
