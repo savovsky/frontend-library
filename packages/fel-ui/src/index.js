@@ -31,6 +31,7 @@ import Paginator from './components/pagination/Paginator';
 import RadioButtonBasic from './components/radioButtons/RadioButtonBasic';
 import RadioButtonLabeled from './components/radioButtons/RadioButtonLabeled';
 import ComboBoxBasic from './components/selects/combobox/ComboBoxBasic';
+import ComboBoxFetch from './components/selects/combobox/ComboBoxFetch';
 import SelectBasic from './components/selects/select/SelectBasic';
 import SideNavBarBasic from './components/sideNavBar/SideNavBarBasic';
 import SnackBarInfo from './components/snackbars/SnackBarInfo';
@@ -75,6 +76,7 @@ export {
     RadioButtonBasic,
     RadioButtonLabeled,
     ComboBoxBasic,
+    ComboBoxFetch,
     SelectBasic,
     SideNavBarBasic,
     SnackBarInfo,

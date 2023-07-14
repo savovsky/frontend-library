@@ -149,6 +149,7 @@ describe('<ComboBoxBasic />', () => {
         expect(textInput).toHaveFocus();
 
         const value2 = queryByText('abe');
+
         expect(value2).toBeInTheDocument();
 
         fireEvent.click(value2);
