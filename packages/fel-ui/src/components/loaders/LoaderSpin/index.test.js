@@ -5,7 +5,7 @@ import LoaderSpin from '.';
 
 afterEach(cleanup);
 
-describe('<LoaderLine />', () => {
+describe('<LoaderSpin />', () => {
     const testMsg = 'Should render Component correctly';
     const componentId = 'fel-loader-spin';
 

@@ -1,0 +1,15 @@
+@import '../../../scss/index';
+
+.fel__table-wrapper {
+    @include table;
+}
+
+.fel__column-title-sort {
+    @include icon-button;
+    @include typography-subtitle4;
+    color: $color-secondary;
+}
+
+.fel__column-title-sort {
+    @include sort-arrows;
+}

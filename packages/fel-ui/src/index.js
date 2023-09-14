@@ -38,6 +38,8 @@ import SnackBarInfo from './components/snackbars/SnackBarInfo';
 import Stepper from './components/Stepper';
 import SwitchBasic from './components/switches/SwitchBasic';
 import SwitchLabeled from './components/switches/SwitchLabeled';
+import TableBasic from './components/tables/TableBasic';
+import TableClientSort from './components/tables/TableClientSort';
 import TextInputBasic from './components/textInputs/TextInputBasic';
 import TitleContainer from './components/title/TitleContainer';
 import TitlePage from './components/title/TitlePage';
@@ -83,6 +85,8 @@ export {
     Stepper,
     SwitchBasic,
     SwitchLabeled,
+    TableBasic,
+    TableClientSort,
     TextInputBasic,
     TitleContainer,
     TitlePage,
